@@ -1,4 +1,4 @@
-import "../Sobre-nos/SobreNos.css";
+import styles from "/src/pages/Sobre-nos/SobreNos.module.css";
 import Layout from "../../components/Layout/index";
 import Casal from "../../assets/SobreNosImg/casal (2).svg";
 import Waves from "../../assets/SobreNosImg/Waves 02.svg";
@@ -42,45 +42,45 @@ const teamMembers: TeamMember[] = [
 function SobreNos() {
     return (
         <Layout>
-            <div className="HeroSobreNos">
-                <div className="ImgHero">
-                    <img src={Casal} alt="Casal" className="Casal" />
+            <div className={styles.HeroSobreNos}>
+                <div className={styles.ImgHero}>
+                    <img src={Casal} alt="Casal" className={styles.Casal} />
                 </div>
-                <div className="HeroText">
-                    <h1>Conheça o projeto <span className="CigarroZero">cigarro zero</span></h1>
+                <div className={styles.HeroText}>
+                    <h1>Conheça o projeto <span className={styles.CigarroZero}>cigarro zero</span></h1>
                     <h2>Uma iniciativa para ajudar pessoas a pararem de fumar</h2>
                     <p>O Projeto foi criado com base em extensas pesquisas sobre<br /> Doenças Pulmonares Obstrutivas Crônicas (DPOC).<br />Reconhecendo o cigarro como um dos principais causadores<br /> dessas doenças, decidimos atacar a raiz do problema para um impacto mais abrangente na saúde das pessoas.</p>
                 </div>
-                <div className="HeroText2">
+                <div className={styles.HeroText2}>
                     <h2>Nosso propósito</h2>
                     <p>Ser uma fonte confiável de informações e uma ferramenta de apoio na <br />luta contra o tabagismo. Ao ajudar indivíduos a abandonarem o cigarro,<br /> buscamos reduzir os casos de doenças relacionadas ao tabagismo e<br /> melhorar a qualidade de vida das pessoas.</p>
-                    <img src={Waves} alt="" className="waves" />
+                    <img src={Waves} alt="" className={styles.waves} />
                 </div>
             </div>
-            <div className="SobreNos">
-                <div className="Miolo">
+            <div className={styles.SobreNos}>
+                <div className={styles.Miolo}>
                     <h3>Conheça o time desse projeto!</h3>
                     <p>Ibson Cabral, facilitador e entusiasta da transformação ágil e digital, criou a iniciativa<br /> "Simulação de Projetos Ágeis" em 2023 para oferecer um ambiente seguro onde<br /> profissionais em transição de carreira possam aplicar seus conhecimentos na prática.<br /><br /><br />
                         Dentro dessa iniciativa, formamos o Time Vermelho Rubi, composto por integrantes de<br /> diversas funções, com a missão de desenvolver o projeto Cigarro Zero. Trabalhamos<br />voluntariamente, utilizando o framework Scrum para gerenciar o projeto e garantir uma entrega de valor contínua.
                     </p>
                 </div>
-                <div className="CardSobreNos">
-                    <img src={Ibson} alt="Foto de Perfil Ibson" className="Ibson" />
+                <div className={styles.CardSobreNos}>
+                    <img src={Ibson} alt="Foto de Perfil Ibson" className={styles.Ibson} />
                     <p>Ibson Cabral</p>
-                    <div className="LinkedinIbson">
-                        <div className="LogoLinkedin1"><img src={Linkedin} alt="Logo Linkedin" /></div>
+                    <div className={styles.LinkedinIbson}>
+                        <div className={styles.LogoLinkedin1}><img src={Linkedin} alt="Logo Linkedin" /></div>
                         <a href="#">Linkedin</a>
                     </div>
                 </div>
             </div>
-            <h3 className="TimeVermelhoRubi">Time Vermelho Rubi</h3>
-            <div className="VermelhoRubi">
+            <h3 className={styles.TimeVermelhoRubi}>Time Vermelho Rubi</h3>
+            <div className={styles.VermelhoRubi}>
                 {teamMembers.map(member => (
-                    <div key={member.id} className="CardVermelhoRubi">
+                    <div key={member.id} className={styles.CardVermelhoRubi}>
                         <img src={member.photoUrl} alt={`Foto de Perfil ${member.name}`} />
-                        <p className="Nome">{member.name}</p>
-                        <p><span className="Cargo">{member.cargo}</span></p>
-                        <div className="LogoLinkedin">
+                        <p className={styles.Nome}>{member.name}</p>
+                        <p><span className={styles.Cargo}>{member.cargo}</span></p>
+                        <div className={styles.LogoLinkedin}>
                             <img src={Linkedin} alt="Logo Linkedin" />
                             <a href={member.linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a>
                         </div>

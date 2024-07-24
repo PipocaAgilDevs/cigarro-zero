@@ -1,5 +1,6 @@
 import styles from "./banner.module.css";
 import imgBanner from "../../../../assets/Informa-se/banner-img.png";
+import smallImgBanner from "../../../../assets/Informa-se/banner_mobile.png";
 import bannerWaves from "../../../../assets/Informa-se/waves.svg";
 
 export function Banner() {
@@ -7,9 +8,13 @@ export function Banner() {
     <div className={styles["bg-informa-se"]}>
       <section className={styles.container}>
         <div className={styles.banner_wrapper}>
-          <div className={styles.banner_img}>
+          {/* <div className={styles.banner_img}>
             <img src={imgBanner} alt="" />
-          </div>
+          </div> */}
+          <picture className={styles.banner_img}>
+            <source srcSet={smallImgBanner} media="(max-width: 768px)" />
+            <img src={imgBanner} alt="Mulher feliz apontando para os cards" />
+          </picture>
 
           <div className={styles.banner_content}>
             <h1>

@@ -8,9 +8,9 @@ export default function InformeSe() {
   return (
     <Layout>
       <Banner />
-      <TitleSection />
+      {/* <TitleSection />
       <Carousel />
-      <CardSection />
+      <CardSection /> */}
     </Layout>
   );
 }

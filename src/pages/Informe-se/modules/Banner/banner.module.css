@@ -5,7 +5,7 @@
 
 .bg-informa-se {
   background: linear-gradient(114deg, #b0c9e7 72.6%, #d9e5f3 94.93%);
-  height: 576px;
+  min-height: 576px;
   position: relative;
 }
 
@@ -22,9 +22,10 @@
   gap: 3.5rem;
 }
 
-.banner_img {
+.banner_img img {
+  display: block;
   max-width: 100%;
-  width: 31.4375rem;
+  max-width: 31.4375rem;
 }
 
 .banner_content {
@@ -106,7 +107,7 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
-  width: 24.625rem;
+  max-width: 24.625rem;
 
   color: var(--grey-500);
   font-family: "Inter";
@@ -120,4 +121,68 @@
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1rem;
+  }
+  html {
+    font-size: 0.875rem;
+  }
+  .banner_content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .banner_content h1 span {
+    font-size: 1.75rem;
+  }
+  .banner_grid_wrapper {
+    padding: 0.875rem 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner_grid {
+    grid-template-columns: 1fr;
+  }
+  .banner_grid_span {
+    grid-column: initial;
+  }
+  .banner_img img {
+    min-width: 21.375rem;
+    width: 100%;
+  }
+  .banner_wrapper {
+    gap: 1.5rem;
+  }
+  .banner_grid_span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner_button {
+    display: none;
+  }
+  .banner_waves {
+    display: none;
+  }
+  .banner_grid_wrapper {
+    align-items: center;
+    text-align: center;
+  }
+  .banner_content h1 {
+    max-width: 20rem;
+    text-align: center;
+  }
+  .banner_wrapper {
+    flex-direction: column-reverse;
+  }
+  .banner_grid {
+    margin: 0 auto;
+  }
+  .banner_grid_wrapper {
+    max-width: 20.5rem;
+  }
 }

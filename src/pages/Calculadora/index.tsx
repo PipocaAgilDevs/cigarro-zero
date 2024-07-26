@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Layout from "../../components/Layout/index";
 import "../Calculadora/Calculadora.css";
 import Homem from "../../assets/calculadora/homem.svg";
@@ -34,14 +34,14 @@ import TrophyOff from "../../assets/calculadora/TrophyOff.svg";
 import Accordion from '../../components/Accordion/Accordion';
 
 function Calculadora() {
-    const [dias, setDias] = useState(1);
+    
     const [textVisible, setTextVisible] = useState(true);
     const [textVisible2, setTextVisible2] = useState(true);
     const [calculatorVisible, setCalculatorVisible] = useState(true);
     const [cardsVisible, setCardsVisible] = useState(false);
     const [cardStates, setCardStates] = useState(Array(12).fill(false)); // Inicialmente todos os cards estão OFF
 
-    const [cards, setCards] = useState([
+    const [cards] = useState([
         { id: 1, imageOn: HeartOn, imageOff: HeartOff, Title: "Após 20 min", Text: "A pressão sanguínea e a pulsação voltam ao normal", extraImageOn: TrophyOn, extraImageOff: TrophyOff },
         { id: 2, imageOn: JumpOn, imageOff: JumpOff, Title: "Após 2 horas", Text: "Não há mais nicotina circulando no sangue", extraImageOn: TrophyOn, extraImageOff: TrophyOff },
         { id: 3, imageOn: TwoHeartsOn, imageOff: TwoHeartsOff, Title: "Após 8 horas", Text: "O nível de oxigênio no sangue se normaliza", extraImageOn: TrophyOn, extraImageOff: TrophyOff },
@@ -127,7 +127,7 @@ function Calculadora() {
         setCalculatorVisible(true);
         setCardsVisible(false);
         setCardStates(Array(12).fill(false));
-        setDias(1);
+        setDias: Number(1);
         
         window.scrollTo({
             top: 0,

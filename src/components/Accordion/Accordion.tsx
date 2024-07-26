@@ -1,5 +1,5 @@
 // Accordion.tsx
-import React, { useState, ReactNode } from 'react';
+import { useState, ReactNode } from 'react';
 import './Accordion.css';
 import setaBaixo from '../../assets/calculadora/setaB.svg';
 import setaCima from '../../assets/calculadora/setaC.svg';

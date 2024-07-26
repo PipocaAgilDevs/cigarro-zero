@@ -3,6 +3,7 @@ import Logo from "../Logo";
 import "./header.css";
 import { useEffect, useState } from "react";
 
+
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,6 +39,7 @@ function Header() {
       window.removeEventListener("scroll", scrollHeader);
     };
   }, []);
+
 
   return (
     <header className={`header ${isScrolled ? "shadow-header" : ""}`}>

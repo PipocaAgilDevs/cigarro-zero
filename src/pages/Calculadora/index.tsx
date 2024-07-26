@@ -31,7 +31,7 @@ import EatOn from "../../assets/calculadora/eat ON.svg";
 import EatOff from "../../assets/calculadora/eat OFF.svg";
 import TrophyOn from "../../assets/calculadora/Trophy.svg";
 import TrophyOff from "../../assets/calculadora/TrophyOff.svg";
-import Accordion from '../../components/Accordion';
+import Accordion from '../../components/Accordion/Accordion';
 
 function Calculadora() {
     const [dias, setDias] = useState(1);
@@ -56,14 +56,11 @@ function Calculadora() {
         { id: 12, imageOn: TreesOn, imageOff: TreesOff, Title: "Após 15 anos", Text: "O risco de doença cardíaca é igual ao de um não fumante", extraImageOn: TrophyOn, extraImageOff: TrophyOff }
     ]);
 
-    const calculateCardStates = (anos, meses, dias) => {
-        // Converte anos e meses para dias e soma com o número de dias
+    const calculateCardStates = (anos:number, meses:number, dias:number) => {
         const totalDias = anos * 365 + meses * 30 + dias;
     
-        // Inicializa todos os estados dos cards como OFF (false)
         let newCardStates = Array(12).fill(false);
     
-        // Verifica as condições e ativa os cards conforme o número total de dias
         if (totalDias >= 1) {
             newCardStates[0] = true;
             newCardStates[1] = true;
@@ -96,10 +93,8 @@ function Calculadora() {
             newCardStates = Array(12).fill(true);
         }
     
-        // Atualiza o estado dos cards com a nova configuração
         setCardStates(newCardStates);
     
-        // Atualiza visibilidade dos componentes
         setTextVisible(true);
         setTextVisible2(false);
         setCalculatorVisible(true);
@@ -107,14 +102,23 @@ function Calculadora() {
     };
     
     const handleCalculate = () => {
-        // Coleta os valores dos inputs
-        const anos = parseInt(document.querySelector('input[placeholder="0"]').value) || 0;
-        const meses = parseInt(document.querySelector('input[placeholder="0"]').value) || 0;
-        const dias = parseInt(document.querySelector('input[placeholder="0"]').value) || 0;
+       
+        const inputs = document.querySelectorAll('input[type="number"]');
     
-        // Chama a função para calcular os estados dos cards
+        if (inputs.length < 3) {
+            console.error("Número insuficiente de inputs");
+            return;
+        }
+    
+        const anos = parseInt((inputs[0] as HTMLInputElement).value) || 0;
+        const meses = parseInt((inputs[1] as HTMLInputElement).value) || 0;
+        const dias = parseInt((inputs[2] as HTMLInputElement).value) || 0;
+        
+    
         calculateCardStates(anos, meses, dias);
     };
+    
+
     
     
     const handleReset = () => {

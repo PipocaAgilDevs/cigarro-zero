@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+// Accordion.tsx
+import React, { useState, ReactNode } from 'react';
 import './Accordion.css';
 import setaBaixo from '../../assets/calculadora/setaB.svg';
 import setaCima from '../../assets/calculadora/setaC.svg';
 
-const Accordion = ({ title, children }) => {
+// Define a interface para as propriedades do componente
+interface AccordionProps {
+    title: string;
+    children: ReactNode;
+}
+
+const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = () => {
@@ -25,3 +32,4 @@ const Accordion = ({ title, children }) => {
 };
 
 export default Accordion;
+

@@ -1,11 +1,12 @@
-import Card from "../../../../components/Card/index";
-import "./EntendaTabagismo.css";
-import card1Image from "../../../../assets/Card/card1.jpg";
-import card2Image from "../../../../assets/Card/card2.jpg";
-import card3Image from "../../../../assets/Card/card3.jpg";
-import card4Image from "../../../../assets/Card/card4.jpg";
 
-function EntendaTabagismo() {
+import Card from '../../../../components/Card';
+import './EntendaTabagismo.css';
+import card1Image from '../../../../assets/Card/card1.jpg';
+import card2Image from '../../../../assets/Card/card2.jpg';
+import card3Image from '../../../../assets/Card/card3.jpg';
+import card4Image from '../../../../assets/Card/card4.jpg';
+
+const EntendaTabagismo = () => {
   return (
     <section className="entenda-tabagismo">
       <div className="container">
@@ -39,6 +40,6 @@ function EntendaTabagismo() {
       </div>
     </section>
   );
-}
+};
 
 export default EntendaTabagismo;

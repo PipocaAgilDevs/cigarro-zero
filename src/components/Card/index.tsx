@@ -1,4 +1,4 @@
-import styles from "./card.module.css";
+import './card.css';
 
 type CardProps = {
   title: string;
@@ -6,14 +6,16 @@ type CardProps = {
   description: string;
 };
 
-export default function Card({ title, image, description }: CardProps) {
+export default function Card({ title, image, description } : CardProps) {
   return (
-    <div className={styles.card}>
-      <img src={image} alt={title} className={styles.card_image} />
-      <div className={styles.card_content}>
+    <div className="card">
+      <img src={image} alt={title} className="card_image" />
+      <div className="card_content">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
   );
 }
+
+

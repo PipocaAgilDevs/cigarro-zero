@@ -101,3 +101,17 @@ footer a {
     text-align: left;
   }
 }
+
+@media (max-width: 400px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    font-size: 14px;
+    
+  }
+  .footer-text-left,
+  .footer-text-right {
+    margin-left: -20px;
+  }
+}

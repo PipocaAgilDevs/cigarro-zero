@@ -239,7 +239,7 @@ input[type="number"] {
     font-size: 17px;
 }
 
-input:focus {
+.inputCalc:focus {
     outline: none;
 }
 
@@ -375,7 +375,7 @@ input:focus {
     text-align: center;
 }
 
-.card {
+.cardInformacao {
     border: 2px solid #A6A6A6;
     width: 256px;
     height: 264px;

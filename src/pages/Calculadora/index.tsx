@@ -174,7 +174,7 @@ function Calculadora() {
                                     </div>
                                     <div className="leftItens2">
                                         <label>Quantos reais voçê pagava na maço?</label>
-                                        <input type="number" placeholder="R$ 00,00" />
+                                        <input type="number" placeholder="R$ 00,00" className="inputCalc" />
                                     </div>
                                     <div className="btnResultado">
                                         <button onClick={handleCalculate}>Ver Resultado</button>
@@ -236,7 +236,7 @@ function Calculadora() {
                                     {cards.map((card, index) => (
                                         <div
                                             key={card.id}
-                                            className={`card ${cardStates[index] ? 'card-on' : 'card-off'}`}
+                                            className={`cardInformacao ${cardStates[index] ? 'card-on' : 'card-off'}`}
                                         >
                                             <div className="cardImage">
                                                 <img src={cardStates[index] ? card.imageOn : card.imageOff} alt="Card" />

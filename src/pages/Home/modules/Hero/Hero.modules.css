@@ -9,8 +9,8 @@
     #b0c9e7 55%,
     #b0c9e7 100%
   );
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   position: relative;
   z-index: -1;
 }

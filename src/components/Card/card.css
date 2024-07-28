@@ -18,14 +18,11 @@ import .card {
 
 .card_content h3 {
   font-size: 20px;
+
   margin-bottom: 8px;
   font-family: Oswald;
   margin-bottom: 8px;
   font-size: 20px;
-}
-
-.card_content p {
-  font-size: 16px;
   font-family: "Inter";
 }
 

@@ -1,5 +1,5 @@
 import heroImage from "../../../../assets/hero-image.svg";
-import "./Hero.css";
+import "./Hero.modules.css";
 
 export default function HeroSection() {
   return (

@@ -6,7 +6,7 @@ type CardProps = {
   description: string;
 };
 
-export default function Card({ title, image, description }: CardProps) {
+export default function Card({ title, image, description } : CardProps) {
   return (
     <div className="card">
       <div>
@@ -19,3 +19,5 @@ export default function Card({ title, image, description }: CardProps) {
     </div>
   );
 }
+
+

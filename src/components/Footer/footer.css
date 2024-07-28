@@ -85,6 +85,10 @@ footer a {
   font-size: 12px;
 }
 
+.LogoWhite {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .FooterIcons {
     flex-direction: column;
@@ -95,5 +99,19 @@ footer a {
   .listFooter,
   .footer-text {
     text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    font-size: 14px;
+    
+  }
+  .footer-text-left,
+  .footer-text-right {
+    margin-left: -20px;
   }
 }

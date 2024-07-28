@@ -1,12 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./footer.css";
 import LogoWhite from "../../assets/logo-white.svg";
+
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/Sobre-nos");
+    window.scrollTo(0, 0);
+  };
+
+  const handleSobreNosClick = () => {
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer>
       <div className="FooterIcons">
         <div className="footer-text">
-          <Link to="/">
+          <Link to="/" onClick={handleLogoClick}>
             <div className="LogoWhite">
               <img src={LogoWhite} alt="Logo Cigarro Zero" />
             </div>
@@ -24,7 +37,9 @@ function Footer() {
                   <Link to="#">Encontrar ajuda</Link>
                 </li>
                 <li>
-                  <Link to="#">Sobre nós</Link>
+                  <Link to="/Sobre-nos" onClick={handleSobreNosClick}>
+                    Sobre nós
+                  </Link>
                 </li>
               </ul>
             </div>

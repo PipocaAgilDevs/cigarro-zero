@@ -18,6 +18,7 @@
 .banner_wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 2rem 0;
   gap: 3.5rem;
 }
@@ -151,6 +152,7 @@
     width: 100%;
   }
   .banner_wrapper {
+    margin: 0 auto;
     gap: 1.25rem;
   }
   .banner_grid_span {

@@ -17,13 +17,22 @@ import .card {
 }
 
 .card_content h3 {
-  font-size: 20px;
+  color: var(--grey500);
+  font-family: "Oswald";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.01375rem;
+  margin-bottom: 0.5rem;
+}
 
-  margin-bottom: 8px;
-  font-family: Oswald;
-  margin-bottom: 8px;
-  font-size: 20px;
+.card_content p {
+  color: var(--grey500);
   font-family: "Inter";
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.011rem;
 }
 
 @media (max-width: 1200px) {

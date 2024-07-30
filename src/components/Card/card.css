@@ -1,0 +1,84 @@
+import .card {
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card_image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.card_content {
+  padding: 6px;
+}
+
+.card_content h3 {
+  color: var(--grey500);
+  font-family: "Oswald";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.01375rem;
+  margin-bottom: 0.5rem;
+}
+
+.card_content p {
+  color: var(--grey500);
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.011rem;
+}
+
+@media (max-width: 1200px) {
+  .card_content h3 {
+    font-size: 1.25rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .card_content p {
+    font-size: 0.875rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 21.375rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid #c0c0c0;
+    background: #fefefe;
+    overflow: hidden;
+  }
+  .card_content {
+    padding: 0.75rem;
+  }
+  .card_content h3 {
+    font-size: 1.25rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .card_content p {
+    font-size: 0.875rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .card_image {
+    border-radius: 0;
+    padding: 0;
+  }
+}

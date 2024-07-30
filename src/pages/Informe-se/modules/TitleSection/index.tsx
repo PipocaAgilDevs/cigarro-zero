@@ -1,12 +1,12 @@
-import styles from "./title.module.css";
+import "./titleSection.css";
 
 function TitleSection() {
   return (
-    <section className={styles.informe_se}>
-      <div className={styles.container}>
-        <div>
+    <section className="section_informe-se">
+      <div className="container">
+        <div className="title_section_content">
           <h2>Entenda sobre o Tabagismo</h2>
-          <p className={styles.subtitle}>Uma seleção especial de conteúdos</p>
+          <p className="subtitle">Uma seleção especial de conteúdos</p>
         </div>
       </div>
     </section>

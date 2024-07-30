@@ -1,40 +1,23 @@
-@media (min-width: 2560px) {
-  .FooterIcons {
-    margin: 0 auto;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-footer {
+.footer {
   width: 100%;
-  max-width: auto;
-  margin: 0 auto;
-  height: auto;
   background-color: #003d84;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   color: #fefefe;
   padding: 20px;
   font-family: "Inter", sans-serif;
 }
 
-footer img {
+.footer img {
   width: 72px;
   height: 60.86px;
   margin-bottom: 20px;
 }
 
-footer a {
+.footer a {
   color: #fefefe;
   text-decoration: none;
 }
 
-.FooterIcons {
+.footer_wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,15 +27,14 @@ footer a {
   margin-bottom: 60px;
 }
 
-.navFooter {
+.nav_footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
-.listFooter {
+.list_links {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   width: 100%;
   gap: 40px;
@@ -65,11 +47,10 @@ footer a {
   margin: 20px 0;
 }
 
-.footer-text {
+.footer_links {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-size: 16px;
 }
 
 .list {
@@ -77,6 +58,12 @@ footer a {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+}
+
+.footer_text {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .footer-text-right,
@@ -90,16 +77,14 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  .FooterIcons {
+  .footer_wrapper {
     flex-direction: column;
     align-items: center;
   }
-
-  .navFooter,
-  .listFooter,
-  .footer-text {
-    text-align: left;
+  .footer img {
+    margin-bottom: 0;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -129,3 +114,36 @@ footer a {
   }
    
 }
+
+  .footer_links {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .nav_footer {
+    justify-content: center;
+  }
+  .list_links {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .list_links li {
+    text-align: center;
+  }
+  .horizonRule {
+    margin: 20px 0 0.75rem 0;
+  }
+  .footer_text {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer-text-left {
+    margin: 5rem 0 0 0;
+    font-size: 0.75rem;
+  }
+  .footer-text-right {
+    font-size: 0.875rem;
+  }
+}
+

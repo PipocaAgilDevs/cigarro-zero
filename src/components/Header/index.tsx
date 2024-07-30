@@ -18,7 +18,10 @@ function Header() {
     navigate("/Informe-se");
     window.scrollTo(0, 0);
   };
-
+  const handleCalculadoraClick = () => {
+    navigate("/calculadora");
+    window.scrollTo(0, 0);
+  };
   const handleSobreNosClick = () => {
     navigate("/Sobre-nos");
     window.scrollTo(0, 0);
@@ -57,7 +60,13 @@ function Header() {
             >
               <li className="nav-list-item">Informe-se</li>
             </Link>
-            <li className="nav-list-item">Calculadora de saúde</li>
+            <Link
+              to="/calculadora"
+              onClick={handleCalculadoraClick}
+              className="header-btn"
+              >
+              <li className="nav-list-item">Calculadora de saúde</li>
+            </Link>
             <li className="nav-list-item">Encontrar ajuda</li>
             <Link
               to="/Sobre-nos"

@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding-top: 36px;
 }
 
 .entenda-tabagismo h2 {
@@ -11,24 +10,26 @@
   margin-bottom: 10px;
   font-family: Oswald, sans-serif;
   font-size: 52px;
-  padding-top: 72px;
+  padding-top: 4.5rem;
 }
 
 .entenda-tabagismo .subtitle {
   text-align: center;
   font-size: 24px;
   color: var(--gray500);
-  margin-bottom: 20px;
   font-family: Inter, sans-serif;
-  padding-bottom: 66px;
+  padding-bottom: 4.125rem;
   font-weight: 500;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px 32px;
-  padding-bottom: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 5rem;
+  padding-top: 2rem;
+  padding-bottom: 3.25rem;
 }
 
 .btn-ver-mais {
@@ -43,4 +44,20 @@
   font-family: Inter, sans-serif;
   margin-bottom: 59px;
   font-weight: 700;
+}
+
+@media (max-width: 1280px) {
+  .card-grid {
+    gap: 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title_section_content h2 {
+    font-size: 1.75rem;
+  }
 }

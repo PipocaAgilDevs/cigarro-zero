@@ -20,6 +20,11 @@
   letter-spacing: -0.572px;
 }
 
+.btn-cta-text {
+  font-size: 1.125rem;
+  padding: 0.75rem 1.375rem;
+}
+
 .sub-text-cta {
   color: var(--Grey-Shades-500, #1c1c1c);
   text-align: center;
@@ -39,5 +44,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
+}
+
+@media (max-width: 650px) {
+  .container-cta {
+    padding: 2rem;
+  }
+
+  .title-cta {
+    font-size: 1.75rem;
+  }
+
+  .sub-text-cta {
+    font-size: 1rem;
+  }
+
+  .btn-cta-text {
+    font-size: 1rem;
+    padding: 0.5rem 0.813rem;
+  }
 }

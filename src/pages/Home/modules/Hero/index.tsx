@@ -3,27 +3,25 @@ import "./Hero.modules.css";
 
 export default function HeroSection() {
   return (
-    <section className="hero">
-      <div className="container">
-        <div className="text-section">
-          <p className="first-title">comece uma vida</p>
-          <p className="second-title">
-            saudável e <span className="colored-text">sem cigarro</span>
+    <section className="banner">
+      <div className="banner-content">
+        <div className="banner-content-text">
+          <p className="banner-title">COMECE UMA VIDA</p>
+          <p className="banner-second-title">
+            SAÚDAVEL E <span className="colored-text">SEM CIGARRO</span>
           </p>
-          <section className="sub-text-section">
-            <p className="sub-text">
+          <div className="sub-text-section">
+            <p className="banner-subtitle">
               Nossa missão é fornecer informações valiosas e recursos de apoio
               para todos que desejam parar de fumar.{" "}
             </p>
-            <p className="sub-text">
+            <p className="banner-subtitle">
               Navegue pelo nosso site e encontre tudo que você precisa para
               começar sua jornada livre do cigarro!
             </p>
-          </section>
+          </div>
         </div>
-        <div className="image-section">
-          <img src={heroImage} alt="Foto depoimentos" />
-        </div>
+        <img src={heroImage} alt="Foto depoimentos" />
       </div>
     </section>
   );

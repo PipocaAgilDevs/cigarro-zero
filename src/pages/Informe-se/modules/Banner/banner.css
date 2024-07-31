@@ -124,9 +124,9 @@
 }
 
 @media (max-width: 1200px) {
-  .container {
+  /* .container {
     padding: 0 1rem;
-  }
+  } */
   .banner_content h1 {
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
@@ -182,4 +182,5 @@
   .banner_grid_wrapper {
     max-width: 20.5rem;
   }
+
 }

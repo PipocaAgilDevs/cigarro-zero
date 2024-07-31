@@ -99,7 +99,14 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1200px;
+body {
+  padding-top: 110px;
+}
+
+.header-content,
+.container,
+.banner-content,
+.container-cta {
+  max-width: 1280px;
   margin: 0 auto;
 }

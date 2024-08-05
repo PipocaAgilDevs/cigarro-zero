@@ -20,9 +20,12 @@ import .card {
   font-size: 20px;
 
   margin-bottom: 8px;
-  font-family: Oswald;
+  font-family: "Oswald";
   margin-bottom: 8px;
   font-size: 20px;
+}
+
+.card_content p {
   font-family: "Inter";
 }
 

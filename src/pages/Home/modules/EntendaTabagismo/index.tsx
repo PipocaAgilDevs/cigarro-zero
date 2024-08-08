@@ -1,4 +1,3 @@
-
 import Card from '../../../../components/Card';
 import './EntendaTabagismo.css';
 import card1Image from '../../../../assets/Card/card1.jpg';
@@ -10,7 +9,7 @@ const EntendaTabagismo = () => {
   return (
     <section className="entenda-tabagismo">
       <div className="container">
-        <div className="header-content">
+        <div className="title_section_content">
           <h2>Entenda sobre o Tabagismo</h2>
           <p className="subtitle">A informação liberta do vício</p>
         </div>
@@ -43,3 +42,5 @@ const EntendaTabagismo = () => {
 };
 
 export default EntendaTabagismo;
+
+

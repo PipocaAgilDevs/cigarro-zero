@@ -1,0 +1,16 @@
+.container {
+  padding: 50px 80px 0 80px;
+  background-color: var(--primary150);
+  font-family: Inter, sans-serif;
+}
+
+.container a {
+  color: inherit;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}

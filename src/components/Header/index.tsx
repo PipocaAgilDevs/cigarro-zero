@@ -1,13 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../Logo";
 import "./header.css";
 import { useEffect, useState } from "react";
 
-
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { contentTitle } = useParams();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,15 +49,18 @@ function Header() {
     };
   }, []);
 
-
   return (
-    <header className={`header ${isScrolled ? "shadow-header" : ""}`}>
+    <header
+      className={`header ${isScrolled ? "shadow-header" : ""}`}
+      // Se é uma página de conteúdo não tem box shadow no header, assim, seguindo o padrão do figma
+      style={contentTitle ? { boxShadow: "none" } : undefined}
+    >
       <div className="header-content">
         <Link to="/" onClick={handleLogoClick}>
-          <Logo/>
+          <Logo />
         </Link>
 
-        <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+        <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
           <ul className="nav-list">
             <Link
               to="/informe-se"
@@ -66,17 +69,17 @@ function Header() {
             >
               <li className="nav-list-item">Informe-se</li>
             </Link>
-            
+
             <Link
               to="/calculadora"
               onClick={handleCalculadoraClick}
               className="header-btn"
-              >
+            >
               <li className="nav-list-item">Calculadora de saúde</li>
             </Link>
-            
+
             <li className="nav-list-item">Encontrar ajuda</li>
-            
+
             <Link
               to="/Sobre-nos"
               onClick={handleSobreNosClick}

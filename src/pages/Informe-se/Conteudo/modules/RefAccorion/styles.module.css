@@ -28,4 +28,5 @@
 
 .accordionContent p {
   margin: 20px 0;
+  overflow-x: hidden;
 }

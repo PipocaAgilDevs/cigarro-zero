@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../Logo";
 import "./header.css";
@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { contentTitle } = useParams();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -50,11 +49,7 @@ function Header() {
   }, []);
 
   return (
-    <header
-      className={`header ${isScrolled ? "shadow-header" : ""}`}
-      // Se é uma página de conteúdo não tem box shadow no header, assim, seguindo o padrão do figma
-      style={contentTitle ? { boxShadow: "none" } : undefined}
-    >
+    <header className={`header ${isScrolled ? "shadow-header" : ""}`}>
       <div className="header-content">
         <Link to="/" onClick={handleLogoClick}>
           <Logo />

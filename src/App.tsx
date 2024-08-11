@@ -17,7 +17,7 @@ function App() {
       element: <InformeSe />,
     },
     {
-      path: "/informe-se/:contentTitle",
+      path: "/informe-se/:contentSlug",
       element: <InformeSeConteudo />,
     },
     {

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../../../components/Layout";
+import RefAccordion from "./modules/RefAccorion";
 
 import styles from "./styles.module.css";
-import House from "../../../assets/Informa-se/Conteudo/House-r.svg";
-import CaretRight from "../../../assets/Informa-se/Conteudo/CaretRight-r.svg";
+import HouseIcon from "../../../assets/Informa-se/Conteudo/HouseIcon.svg";
+import ArrowRightIcon from "../../../assets/Informa-se/Conteudo/ArrowRightIcon.svg";
 import EntendendoOTabagismoImg from "../../../assets/Informa-se/Conteudo/entendendo-o-tabagismo-img.jpg";
 import RobertaEscritoraImg from "../../../assets/Informa-se/Conteudo/roberta-escritora.jpg";
 
@@ -13,9 +14,9 @@ export default function InformeSeConteudo() {
       <div className={styles.container}>
         <div className={styles.breadcrumb}>
           <Link to="/">
-            <img src={House} alt="home icon" sizes="24px" />
+            <img src={HouseIcon} alt="home icon" sizes="24px" />
           </Link>
-          <img src={CaretRight} alt="arrow icon" sizes="16px" />
+          <img src={ArrowRightIcon} alt="arrow right icon" sizes="16px" />
           <p>Impacto do Cigarro na Saúde: Entendendo o Tabagismo</p>
         </div>
         <main className={styles.main}>
@@ -199,6 +200,7 @@ export default function InformeSeConteudo() {
                 todos.
               </p>
             </section>
+            <RefAccordion />
           </article>
         </main>
       </div>

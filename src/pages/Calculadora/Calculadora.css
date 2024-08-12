@@ -1,482 +1,689 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+/*========== CALCULADORA =============*/
+
+.calculadora-container {
+  margin: 0 auto;
+  width: 100%;
 }
 
-
-input[type="number"] {
-    -moz-appearance: textfield;
+.calculadora-content {
+  background-color: #b0c9e7;
+  border-radius: 0px 0px 60px 60px;
 }
 
-.containerCalculadora {
-    margin: 0 auto;
-    width: 100%;
-    
+.calculadora-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  flex-wrap: wrap;
 }
 
-.section1 {
-    background-color: #b0c9e7;
-    border-radius: 0px 0px 60px 60px;
+.calculadora-text-container {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  max-width: 100%;
 }
 
-.container1 {
-    padding-top: 30px;
-    background-color: #b0c9e7;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: auto;
-    max-width: 1200px;
+.calculadora-text-container h1 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: #003d84;
+  text-align: left;
 }
 
-.textCalculadora {
-    background-color: #b0c9e7;
-    font-family: "Oswald", sans-serif;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
-
-    h1 {
-        font-size: 60px;
-        color: #003d84;
-        text-align: left;
-    }
-
-    p {
-        font-weight: 500;
-        font-size: 23px;
-        line-height: 36px;
-        font-family: "Inter", sans-serif;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        text-align: justify;
-    }
+.calculadora-text-container p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-family: "Inter", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: justify;
 }
 
-.smallText {
-    font-weight: normal;
-    font-size: smaller;
+.calculadora-text-small {
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-.textBolder {
-    font-weight: bolder;
+.calculadora-text-small-bolder {
+  font-weight: bolder;
 }
 
-.fotoHomem {
-    max-width: 100vw;
-    width: 45%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.calculadora-banner-container {
+  max-width: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.homem {
-    width: 100vw;
-    max-width: 807px;
-    margin-right: 190px;
+.calculadora-banner-image {
+  max-width: 100%;
+  height: auto;
 }
 
 .calculadora {
-    display: flex;
-    flex-direction: column;
-    background-color: #b0c9e7;
-    padding-bottom: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #b0c9e7;
+  padding-bottom: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.calculadoraItens {
-    border-radius: 40px;
-    background-color: #FEFEFE;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-bottom: 25px;
+.calculadora-forms {
+  border-radius: 40px;
+  background-color: #fefefe;
+  padding: 24px 64px 32px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    h2 {
-        color: #00244f;
-        font-family: "Oswald", sans-serif;
-        padding-top: 20px;
-        padding-bottom: 30px;
-    }
+.calculadora-forms h2 {
+  font-family: "Oswald", "Sans-serif";
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 48px;
+}
 
-    h3 {
-        font-weight: 500;
-        font-family: "Inter", sans-serif;
-        color: #00244f;
-    }
+.calculadora-input-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-    label {
-        font-family: "Inter", sans-serif;
-        color: #00499e;
-    }
+.calculadora-input-container[1] {
+  display: flex;
+  justify-content: space-between;
+}
 
-    input {
-        width: 59px;
-        height: 35px;
-        border-radius: 8px;
-        border: 2px solid #b0c9e7;
-        text-align: right;
-        padding-right: 12px;
-    }
+.coluna {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 2rem;
+  gap: 12px; /*tem que entender isso melhor*/
+}
 
-    button {
-        width: 211px;
-        height: 51px;
-        border-radius: 8px;
-        background-color: #0051b0;
-        border: none;
-        color: #FEFEFE;
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-        font-size: 17px;
-        cursor: pointer;
-    }
+.coluna:last-child {
+  margin-right: 0;
+}
+
+.leftItens input,
+.rightItens input,
+.leftItens2 input {
+  width: 100px;
+  margin-right: 10px;
 }
 
 .leftItens {
-    margin-top: 25px;
-    margin-right: 675px;
-    align-items: flex-start;
-    text-align: start;
-
-    h3 {
-        padding-bottom: 15px;
-        margin-left: 7px;
-    }
-
-    input {
-        margin: 7px;
-        margin-right: 5px;
-    }
-}
-
-.rightItens {
-    margin-top: -85px;
-    margin-left: 320px;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-        padding-bottom: 15px;
-    }
-
-    label {
-        margin-top: -25px;
-        margin-right: 150px;
-        padding-bottom: 15px;
-    }
-
-    p {
-        text-align: start;
-    }
-
-    input {
-        width: 59px;
-        height: 35px;
-        cursor: pointer;
-        pointer-events: auto;
-        z-index: 1;
-    }
+  display: flex;
+  gap: 10px;
+  gap: 12px;
 }
 
 .leftItens2 {
-    display: flex;
-    flex-direction: column;
-    margin-right: 700px;
-    padding-top: 50px;
-
-    label {
-        font-size: 1.17em;
-        font-weight: 500;
-        font-family: "Inter", sans-serif;
-        color: #00244f;
-        padding-bottom: 15px;
-    }
-
-    input {
-        width: 121px;
-        color: var(--primary250);
-        font-size: 18px;
-    }
-
-    input::placeholder {
-        font-family: "Inter", sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 20px;
-        text-align: right;
-        color: var(--primary250);
-
-    }
-
-
+  margin-top: 20px;
 }
 
-.inputCalc {
-    color: #00499e;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    cursor: pointer;
-}
+/* .inputs {
+  display: flex;
+  flex-direction: column;
+} */
 
-.inputCalc::placeholder {
-    color: #00499e;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-}
-
-.inputCalc:focus {
-    outline: none;
+.coluna h3 {
+  font-family: "Inter", "sans-serif";
+  color: var(--primary450);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .obs {
-    font-family: "Inter", sans-serif;
-    color: #00244f;
-    font-weight: 400;
+  font-size: 0.85rem;
+  color: #00244f;
+  font-weight: 400;
 }
 
 .btnResultado {
-    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-.cardContainer {
-    margin: 0 auto;
-    max-width: 1200px;
-
-    h2 {
-        font-family: "Oswald", sans-serif;
-        font-weight: 600;
-        font-size: 36px;
-        color: #003D84;
-        text-align: center;
-        margin-top: 30px
-    }
+.btnResultado button {
+  width: 211px;
+  height: 51px;
+  border-radius: 8px;
+  background-color: #0051b0;
+  border: none;
+  color: #fefefe;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.Banerresultados {
-    margin: 0 auto;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 143px;
-    border-radius: 40px;
-    border: 2px solid #00499E;
-    justify-content: center;
+.btnResultado button:hover {
+  background-color: #0056b3;
 }
 
-.resultItens {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-
-    p {
-        font-family: "Inter", sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-    }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.resultCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    margin: 0 auto;
-    padding: 15px;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-.resultIcon {
-    display: flex;
-    flex-direction: row;
-
-    img {
-        padding-right: 9px;
-    }
+input[type="number"] {
+  font-size: 20px;
+  color: var(--primary250);
+  height: 35px;
+  border-radius: 8px;
+  border: 2px solid #b0c9e7;
+  text-align: right;
+  padding-right: 12px;
 }
 
-.dadosResult {
-    color: #F27D00;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-
+input[placeholder] {
+  color: var(--primary250);
 }
-
-.textResult {
-    white-space: nowrap;
-    padding-top: 18px;
-    text-align: center;
-    justify-content: center;
-    font-weight: 500;
-}
+/*========== TEXTO INFORMATIVO CALCULADORA =============*/
 
 .textCigarroZero {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 0 0px 76px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    h2 {
-        margin-top: 25px;
-        font-family: "Oswald", sans-serif;
-        font-weight: 600;
-        font-size: 36px;
-        color: #003D84;
-    }
-
-    p {
-        padding-top: 30px;
-        padding-bottom: 50px;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        font-size: 19px;
-        text-align: justify;
-    }
-
-    ul {
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        margin: 0 auto;
-        align-items: center;
-        font-size: 19px;
-    }
+.textCigarroZero h2 {
+  font-size: 2.5rem;
+  padding-top: 64px;
+  padding-bottom: 24px;
 }
 
 .listText {
-    display: flex;
-    flex-direction: column;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: justify;
+  /* padding: 24px; */
+}
+
+.listText p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.list2 {
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.listItens {
+  padding: 10px 0px;
+}
+
+.textLeft p {
+  margin-bottom: 76px;
+}
+
+/* .textCigarroZero {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    margin-top: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #003d84;
+  }
+
+  p {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: justify;
+  }
+
+  ul {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     margin: 0 auto;
     align-items: center;
+    font-size: 19px;
+  }
+} */
+
+/*========== RESULTADOS E CARDS =============*/
+
+.cardContainer {
+  margin: 0 auto;
+  margin-top: 50px;
+
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #003d84;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.Banerresultados {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.resultCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  margin: 10px;
 }
 
 .cardSection {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.cardInformacao {
-    border: 2px solid #A6A6A6;
-    width: 256px;
-    height: 264px;
-    border-radius: 25px;
-    padding: 16px;
-    background: #FFFFFF;
-    margin-bottom: 35px;
-
-}
-
-.card-on .cardImage {
-    border: 2px solid var(--primary250, #001c3e);
-}
-
-.card-on {
-    border: 2px solid var(--primary250, #001c3e);
-}
-
-.card-on .cardTitle h3 {
-    color: var(--primary400);
-}
-
-.card-on .cardText p {
-    color: var(--primary500);
-    /* Cor do texto quando o card está ON */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 35px;
-    justify-content: space-between;
-    padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.cardImage {
-    border: 1.5px solid #A6A6A6;
-    width: 224px;
-    height: 130px;
-    border-radius: 20px;
-    padding: 3px, 21px, 3px, 21px;
-    gap: 10px;
+.cardInformacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.cardText {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: left;
-    align-items: left;
+.card-on {
+  border: 2px solid #003d84;
+}
 
-    h3 {
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-        font-size: 18px;
-        color: #6C6C6C;
-        line-height: 21.6px;
-        text-align: left;
-    }
+.card-off {
+  border: 2px solid #ddd;
+}
 
-    p {
-        margin-top: 9px;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        color: #6C6C6C;
-        line-height: 19.2px;
-        text-align: left;
-    }
+/* .cardImage img {
+  max-width: 100px;
+} */
 
-    img {
-        width: 28px;
-        height: 26.25px;
-    }
+.cardImage img {
+  width: 100%;
 }
 
 .cardTitle {
-    margin-top: 5px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardTitle h3 {
+  font-size: 1.5rem;
+  color: #003d84;
+}
+
+.cardTitle img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.cardSubtitle {
+  text-align: left;
 }
 
 .button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .button button {
-    cursor: pointer;
-    border: none;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    width: 186px;
-    height: 40px;
-    background-color: #FEB200;
-    border-radius: 8px;
-    padding: 16px 16px;
-    display: flex;
+  cursor: pointer;
+  border: none;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  width: 186px;
+  height: 40px;
+  background-color: #feb200;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  margin: 0 auto;
+  /* max-width: 1200px; */
+
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #003d84;
     text-align: center;
-    align-items: center;
+    margin-top: 30px;
+  }
+}
+
+.Banerresultados {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 143px;
+  border-radius: 40px;
+  border: 2px solid #00499e;
+  justify-content: center;
+}
+
+.resultItens {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 64px;
+
+  p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.resultIcon {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    padding-right: 9px;
+  }
+}
+
+.dadosResult {
+  color: #f27d00;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.textResult {
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.cardContent {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.cardSection .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.cardSection .cards .cardInformacao {
+  flex: 1 1 calc(25% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-height: 200px; /* Definir altura mínima */
+  box-sizing: border-box; /* Garantir que padding e border sejam incluídos na largura e altura */
+}
+
+.cardSection .cards .cardInformacao.card-off img {
+  max-width: 100%;
+  height: auto;
+  border: 1.5px solid #a6a6a6;
+  border-radius: 20px;
+}
+
+.cardSection .cards .cardInformacao.card-on img {
+  max-width: 100%;
+  height: auto;
+  border: 1.5px solid #8baeda;
+  border-radius: 20px;
+}
+
+.cardSection .cards .cardInformacao.card-on {
+  background-color: #ffffff;
+  border: 2px solid var(--primary200);
+  border-radius: 25px;
+}
+
+.cardSection .cards .cardInformacao.card-off {
+  background-color: #ffffff;
+  border: 2px solid #a6a6a6;
+  border-radius: 25px;
+}
+
+.cardSection .cards .cardInformacao:hover {
+  transform: translateY(-5px);
+}
+
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultIcon img {
+  width: 50px;
+  height: 50px;
+}
+
+.dadosResult {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/*========== RESPONSIVO DISPOSITIVOS MENORES =============*/
+
+@media screen and (max-width: 1280px) {
+  .calculadora-header {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .calculadora-text-container h1 {
+    text-align: center;
+  }
+
+  .calculadora-text-container p {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .calculadora-banner-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .calculadora-forms {
+    padding: 1rem;
+  }
+
+  .leftItens,
+  .rightItens,
+  .leftItens2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leftItens input,
+  .rightItens input,
+  .leftItens2 input {
+    width: 100%;
+  }
+
+  .Banerresultados {
+    flex-direction: column;
+  }
+
+  .cardInformacao {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calculadora {
+    padding: 0 20px 60px 20px;
+  }
+  .calculadora-input-container {
+    flex-direction: column;
+  }
+
+  .leftItens input,
+  .rightItens input,
+  .leftItens2 input {
+    margin-right: 10px;
+  }
+
+  .coluna {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .btnResultado {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .Banerresultados {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .resultItens {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Ajustes para responsividade dos cards */
+
+@media screen and (max-width: 650px) {
+  .cardSection .cards {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .cardSection .cards .cardInformacao {
+    flex: 1;
+  }
+}
+
+/* Ajustes para responsividade dos cards */
+
+@media screen and (max-width: 1024px) {
+  .cardSection .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardInformacao {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardSection .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cardInformacao {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cardSection .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardInformacao {
+    width: 100%; /* Ajuste para garantir margem */
+    margin-bottom: 20px;
+  }
+
+  .cardTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .calculadora-text-container h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .calculadora-text-container p {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 10px;
+  }
 }

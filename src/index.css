@@ -105,7 +105,9 @@ body {
 
 .header-content,
 .container,
+.calculadora-header,
 .banner-content,
+.cardContent,
 .container-cta {
   max-width: 1280px;
   margin: 0 auto;

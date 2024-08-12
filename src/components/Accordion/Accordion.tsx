@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
             </button>
             <div className={`accordion-content ${isOpen ? 'open' : ''}`} onClick={toggleAccordion}>
                 {children}
-                {isOpen && <img src={setaCima} alt="Seta" className="setaCima" />}
+                {/* {isOpen && <img src={setaCima} alt="Seta" className="setaCima" />} */}
             </div>
         </div>
     );

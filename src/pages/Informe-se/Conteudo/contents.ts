@@ -1,7 +1,9 @@
 import EntendendoOTabagismoImg from "../../../assets/Informa-se/Conteudo/heros/entendendo-o-tabagismo-conteudo.jpg";
 import ImpactoDoCigarroImg from "../../../assets/Informa-se/Conteudo/heros/impacto-do-cigarro-conteudo.png";
-import BeneficiosDePararDeFumar from "../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismo from "../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import BeneficiosDePararDeFumarImg from "../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "../../../assets/Informa-se/Conteudo/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
+import CigarroEletronicoMitosEVerdadesImg from "../../../assets/Informa-se/Conteudo/heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
 import RobertaEscritoraImg from "../../../assets/Informa-se/Conteudo/writers/roberta-escritora.jpg";
 import GabrielaEscritoraImg from "../../../assets/Informa-se/Conteudo/writers/gabriela-escritora.jpg";
 
@@ -373,7 +375,7 @@ const contents = {
   "beneficios-de-parar-de-fumar": {
     title: "Benefícios de Parar de Fumar",
     subtitle: "Uma nova vida te espera!",
-    heroImage: BeneficiosDePararDeFumar,
+    heroImage: BeneficiosDePararDeFumarImg,
     writer: {
       photo: RobertaEscritoraImg,
       name: "Roberta Braz",
@@ -528,7 +530,7 @@ const contents = {
   "comparacao-entre-metodos-de-cessação-do-tabagismo": {
     title: "Comparação Entre Métodos de Cessação do Tabagismo",
     subtitle: "Parar de fumar é possível e cada vez mais acessível",
-    heroImage: ComparacaoEntreMetodosDeCessacaoDoTabagismo,
+    heroImage: ComparacaoEntreMetodosDeCessacaoDoTabagismoImg,
     writer: {
       photo: RobertaEscritoraImg,
       name: "Roberta Braz",
@@ -696,6 +698,219 @@ const contents = {
                 Lembre-se, você não está sozinho nessa jornada! Junte-se ao
                 movimento Cigarro Zero e conquiste a liberdade do tabaco.
               </p>
+            </section>
+    `,
+  },
+  "o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens": {
+    title:
+      "O Papel das Mídias Sociais na Promoção do Tabagismo entre os Jovens",
+    subtitle:
+      "Cigarro e redes sociais: uma combinação explosiva para sua saúde.",
+    heroImage: OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg,
+    writer: {
+      photo: RobertaEscritoraImg,
+      name: "Roberta Braz",
+      articleDate: "12 de agosto de 2024",
+    },
+    article: `
+            <section>
+              <p>
+                A cada dia, milhares de jovens brasileiros iniciam o vício do
+                cigarro, muitos deles influenciados pelas redes sociais. Dados
+                da última Pesquisa Nacional de Saúde do Escolar (PeNSE), revelou
+                que, em 2019, 16,8% dos escolares de 13 a 17 anos já haviam
+                experimentado o cigarro eletrônico, sendo 13,6% nos de 13 a 15
+                anos e 22,7% nos de 16 e 17 anos. Quanto ao sexo, a
+                experimentação é maior entre os homens (18,1%) do que entre as
+                mulheres (14,6%). As crianças e adolescentes que usam cigarros
+                eletrônicos têm pelo menos duas vezes mais probabilidade de
+                fumar cigarros mais tarde na vida.
+              </p>
+              <p>
+                A entrada no vício durante a adolescência está associada a
+                diversas razões, incluindo, a imitação do comportamento do
+                grupo, amigos e pais tabagistas. Um outro fator que contribui
+                para esse quadro é o fácil acesso, apontado como um dos
+                principais motivos de iniciação e indução ao consumo.
+              </p>
+              <p>
+                Além disso, influenciadores e celebridades frequentemente postam
+                fotos e vídeos onde aparecem fumando ou usando produtos de
+                tabaco, muitas vezes sem qualquer menção direta ao produto. Essa
+                exposição indireta normaliza o comportamento e o torna atraente
+                para os jovens.
+              </p>
+            </section>
+            <section>
+              <h3>Impactos da promoção do tabagismo nas mídias sociais</h3>
+              <ul>
+                <li>
+                  Normalização do comportamento: um dos maiores impactos da
+                  promoção do tabagismo nas mídias sociais é a normalização
+                  desse comportamento. Quando os jovens veem seus amigos,
+                  influenciadores e celebridades fumando, eles podem começar a
+                  ver o tabagismo como uma atividade socialmente aceitável e
+                  desejável. Isso pode levar à iniciação precoce e ao
+                  desenvolvimento de hábitos de fumo que podem durar a vida
+                  inteira.
+                </li>
+                <li>
+                  Redução da percepção dos riscos: as mídias sociais têm o
+                  potencial de reduzir a percepção dos riscos associados ao
+                  tabagismo. A representação glamorosa e muitas vezes
+                  inconsequente do fumo pode fazer com que os jovens subestimem
+                  os perigos reais, como doenças cardíacas, câncer e
+                  dependência. A falta de informação precisa e a glamorização do
+                  comportamento contribuem para uma visão distorcida do
+                  tabagismo.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h3>Como podemos combater a promoção do tabagismo?</h3>
+              <ul>
+                <li>
+                  Educação e conscientização: uma das estratégias mais eficazes
+                  para combater a promoção do tabagismo nas mídias sociais é
+                  aumentar a educação e a conscientização entre os jovens sobre
+                  os riscos do tabagismo. Campanhas educacionais que utilizam as
+                  mesmas plataformas de mídias sociais podem alcançar um grande
+                  público e fornecer informações precisas e impactantes.
+                </li>
+                <li>
+                  Políticas e regulamentações: as plataformas de mídias sociais
+                  devem ser incentivadas a implementar e reforçar políticas que
+                  proíbam a promoção de produtos de tabaco. Além disso, a
+                  regulamentação governamental pode desempenhar um papel
+                  essencial na limitação da publicidade de tabaco nas mídias
+                  sociais, incluindo a promoção indireta por influenciadores.
+                </li>
+                <li>
+                  Envolvimento da comunidade: o envolvimento da comunidade,
+                  incluindo pais, escolas e organizações de saúde, é essencial
+                  para criar um ambiente que desencoraje o tabagismo. Programas
+                  de prevenção do tabagismo que envolvem a participação ativa da
+                  comunidade podem ajudar a construir uma rede de apoio para
+                  jovens, reduzindo a pressão para experimentar o tabaco.
+                </li>
+              </ul>
+              <p>Junte-se a nós nesse movimento Cigarro Zero!</p>
+            </section>
+    `,
+  },
+  "cigarro-eletronico-mitos-e-verdades": {
+    title: "Cigarro Eletrônico: Mitos e Verdades",
+    subtitle: "Um novo visual, os mesmos perigos!",
+    heroImage: CigarroEletronicoMitosEVerdadesImg,
+    writer: {
+      photo: RobertaEscritoraImg,
+      name: "Roberta Braz",
+      articleDate: "12 de agosto de 2024",
+    },
+    article: `
+            <section>
+              <p>
+                Os cigarros eletrônicos, ou vapes, têm ganhado crescente
+                popularidade, sendo promovidos como uma alternativa supostamente
+                mais segura ao cigarro tradicional. Desde sua introdução em
+                2003, esses dispositivos passaram por uma evolução
+                significativa, envolvendo várias gerações de produtos.
+                Inicialmente, surgiram os modelos descartáveis, projetados para
+                uso único. Em seguida, apareceram os dispositivos recarregáveis,
+                que utilizam refis líquidos em sistemas abertos ou fechados.
+              </p>
+              <p>
+                Além disso, a indústria introduziu dispositivos de tabaco
+                aquecido, que utilizam um refil sólido, geralmente contendo
+                tabaco. Os cigarros eletrônicos também ampliaram suas
+                possibilidades com o uso de nicotina em formas diferenciadas,
+                como sais de nicotina e nicotina sintética, além de permitir o
+                consumo de outras plantas e substâncias alternativas ao tabaco.
+              </p>
+              <p>
+                Apesar de sua crescente popularidade, é essencial esclarecer que
+                os cigarros eletrônicos não são uma alternativa inofensiva.
+                Segundo o
+                <a
+                  href="https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/observatorio-da-politica-nacional-de-controle-do-tabaco/politica-nacional/dispositivos-eletronicos-para-fumar-def-1"
+                  target="_blank"
+                >
+                  Instituto Nacional de Câncer (INCA)
+                </a>
+                , os Dispositivos Eletrônicos para Fumar (DEFs) não são seguros,
+                pois contêm substâncias tóxicas, além da nicotina. Esses
+                dispositivos podem causar diversas doenças graves, incluindo
+                enfisema pulmonar, doenças cardiovasculares, dermatite e câncer.
+                Estudos também mostram que os níveis de toxicidade dos cigarros
+                eletrônicos podem ser tão prejudiciais quanto os dos cigarros
+                tradicionais, uma vez que combinam substâncias tóxicas que
+                mascaram os efeitos danosos.
+              </p>
+            </section>
+            <section>
+              <h3>O cigarro eletrônico é inofensivo para a saúde?</h3>
+              <p>
+                Embora não contenha tabaco, o vape libera substâncias químicas
+                que podem causar danos à saúde, como metais pesados, partículas
+                finas e compostos orgânicos voláteis. Além disso, a nicotina
+                presente no líquido para vape causa dependência e pode levar a
+                problemas cardíacos e respiratórios.
+              </p>
+            </section>
+            <section>
+              <h3>O cigarro eletrônico ajuda a parar de fumar?</h3>
+              <p>
+                Alguns estudos sugerem que o cigarro eletrônico pode auxiliar na
+                cessação do tabagismo tradicional, ao fornecer a nicotina de
+                forma diferente. No entanto, muitos ex-fumantes acabam usando
+                ambos os produtos simultaneamente ou trocam um vício pelo outro.
+              </p>
+            </section>
+            <section>
+              <h3>O vapor do cigarro eletrônico não faz mal aos outros?</h3>
+              <p>
+                Assim como a fumaça do cigarro tradicional, o vapor do cigarro
+                eletrônico contém partículas que podem ser prejudiciais à saúde
+                das pessoas ao redor, especialmente crianças e pessoas com
+                problemas respiratórios.
+              </p>
+            </section>
+            <section>
+              <h3>O cigarro eletrônico é regulamentado e seguro?</h3>
+              <p>
+                A regulamentação do cigarro eletrônico varia de país para país.
+                No Brasil, a Agência Nacional de Vigilância Sanitária (Anvisa),
+                publicou a
+                <a
+                  href="https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-rdc-n-855-de-23-de-abril-de-2024-555721206"
+                  target="_blank"
+                >
+                  Resolução da Diretoria Colegiada (RDC) nº 855, de 23 de abril
+                  de 2024
+                </a>
+                , proibido a fabricação, a importação, a comercialização, a
+                distribuição, o armazenamento, o transporte e a propaganda de
+                dispositivos eletrônicos.
+              </p>
+            </section>
+            <section>
+              <h3>O cigarro eletrônico não causa câncer?</h3>
+              <p>
+                Embora existam menos estudos sobre o cigarro eletrônico em
+                comparação ao cigarro tradicional, algumas pesquisas indicam que
+                o vape pode aumentar o risco de desenvolver certos tipos de
+                câncer, especialmente os relacionados ao sistema respiratório.
+              </p>
+              <p>
+                A ideia de que os cigarros eletrônicos são uma solução mágica
+                para deixar de fumar é enganosa. Qualquer produto que contenha
+                nicotina é viciante e pode trazer sérios riscos à saúde.
+                Portanto, a melhor forma de proteger sua saúde é evitar tanto o
+                cigarro tradicional quanto o eletrônico, buscando alternativas
+                saudáveis, como terapia e acompanhamento médico, para lidar com
+                o vício e adotar um estilo de vida mais saudável.
+              </p>
+              <p>Junte-se a nós nesse movimento Cigarro Zero!</p>
             </section>
     `,
   },

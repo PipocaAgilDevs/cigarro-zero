@@ -2,8 +2,8 @@ import Card from "../../../../components/Card";
 import "./EntendaTabagismo.css";
 import EntendendoOTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/entendendo-o-tabagismo-conteudo.jpg";
 import ImpactoDoCigarroImg from "../../../../assets/Informa-se/Conteudo/heros/impacto-do-cigarro-conteudo.png";
-import BeneficiosDePararDeFumar from "../../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismo from "../../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import BeneficiosDePararDeFumarImg from "../../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -32,14 +32,14 @@ const EntendaTabagismo = () => {
           />
           <Card
             title="Benefícios de Parar de Fumar"
-            image={BeneficiosDePararDeFumar}
+            image={BeneficiosDePararDeFumarImg}
             description="Quando alguém para de fumar, há uma série de benefícios significativos para a saúde. Confira!"
             to="/informe-se/beneficios-de-parar-de-fumar"
           />
           <Card
             title="Comparação Entre Métodos de Cessação do Tabagismo"
-            image={ComparacaoEntreMetodosDeCessacaoDoTabagismo}
-            description="Terapia de reposição de nicotina, medicamentos, acupuntura, hipnose e tratamentos comportamentais. Avalie a eficácia de cada um."
+            image={ComparacaoEntreMetodosDeCessacaoDoTabagismoImg}
+            description="Parar de fumar é possível e cada vez mais acessível."
             to="/informe-se/comparacao-entre-metodos-de-cessação-do-tabagismo"
           />
         </div>

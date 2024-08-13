@@ -2,8 +2,10 @@ import Card from "../../../../components/Card";
 import "./cardSection.css";
 import EntendendoOTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/entendendo-o-tabagismo-conteudo.jpg";
 import ImpactoDoCigarroImg from "../../../../assets/Informa-se/Conteudo/heros/impacto-do-cigarro-conteudo.png";
-import BeneficiosDePararDeFumar from "../../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismo from "../../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import BeneficiosDePararDeFumarImg from "../../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "../../../../assets/Informa-se/Conteudo/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
+import CigarroEletronicoMitosEVerdadesImg from "../../../../assets/Informa-se/Conteudo/heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
 
 function CardSection() {
   return (
@@ -23,15 +25,27 @@ function CardSection() {
         />
         <Card
           title="Benefícios de Parar de Fumar"
-          image={BeneficiosDePararDeFumar}
+          image={BeneficiosDePararDeFumarImg}
           description="Quando alguém para de fumar, há uma série de benefícios significativos para a saúde. Confira!"
           to="/informe-se/beneficios-de-parar-de-fumar"
         />
         <Card
           title="Comparação Entre Métodos de Cessação do Tabagismo"
-          image={ComparacaoEntreMetodosDeCessacaoDoTabagismo}
-          description="Terapia de reposição de nicotina, medicamentos, acupuntura, hipnose e tratamentos comportamentais. Avalie a eficácia de cada um."
+          image={ComparacaoEntreMetodosDeCessacaoDoTabagismoImg}
+          description="Parar de fumar é possível e cada vez mais acessível."
           to="/informe-se/comparacao-entre-metodos-de-cessação-do-tabagismo"
+        />
+        <Card
+          title="O Papel das Mídias Sociais na Promoção do Tabagismo entre os Jovens"
+          image={OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg}
+          description="Cigarro e redes sociais: uma combinação explosiva para sua saúde."
+          to="/informe-se/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens"
+        />
+        <Card
+          title="Cigarro Eletrônico: Mitos e Verdades"
+          image={CigarroEletronicoMitosEVerdadesImg}
+          description="Um novo visual, os mesmos perigos!"
+          to="/informe-se/cigarro-eletronico-mitos-e-verdades"
         />
       </div>
     </section>

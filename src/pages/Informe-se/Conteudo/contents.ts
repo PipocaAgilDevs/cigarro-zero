@@ -3,6 +3,7 @@ import ImpactoDoCigarroImg from "../../../assets/Informa-se/Conteudo/heros/impac
 import BeneficiosDePararDeFumar from "../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
 import ComparacaoEntreMetodosDeCessacaoDoTabagismo from "../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
 import RobertaEscritoraImg from "../../../assets/Informa-se/Conteudo/writers/roberta-escritora.jpg";
+import GabrielaEscritoraImg from "../../../assets/Informa-se/Conteudo/writers/gabriela-escritora.jpg";
 
 const contents = {
   "entendendo-o-tabagismo": {
@@ -181,8 +182,8 @@ const contents = {
       "O tabagismo causa diversas doenças graves, incluindo problemas respiratórios, cardiovasculares e diferentes tipos de câncer",
     heroImage: ImpactoDoCigarroImg,
     writer: {
-      photo: RobertaEscritoraImg,
-      name: "Roberta Braz",
+      photo: GabrielaEscritoraImg,
+      name: "Gabriela Buarque",
       articleDate: "22 de julho de 2024",
     },
     article: `

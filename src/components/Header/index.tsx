@@ -35,7 +35,7 @@ function Header() {
   return (
     <header className={`header ${isScrolled ? "shadow-header" : ""}`}>
       <div className="header-content">
-        <Link to="/">
+        <Link to="/" onClick={scrollUp}>
           <Logo />
         </Link>
 

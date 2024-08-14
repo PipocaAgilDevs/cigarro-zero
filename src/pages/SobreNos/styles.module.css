@@ -202,6 +202,33 @@
 }
 
 @media (max-width: 480px) {
+  .main {
+    text-align: center;
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .subhero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .textCard {
+    padding-right: 0;
+  }
+
+  .teamSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .teamGrid {
     grid-template-columns: 1fr;
   }

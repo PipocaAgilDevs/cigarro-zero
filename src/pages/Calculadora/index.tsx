@@ -92,10 +92,6 @@ function Calculadora() {
     }
   }, [cardsVisible]);
 
-  useEffect(() => {
-    calculadoraRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
-
   // const scrollToCalculadora = () => {
   //   calculadoraRef.current?.scrollIntoView({ behavior: 'smooth' });
   // };
@@ -156,6 +152,9 @@ function Calculadora() {
   };
     
   const handleCalculate = () => {
+    
+    calculadoraRef.current?.scrollIntoView({ behavior: 'smooth' });
+
     const anos = parseInt(inputAnosRef.current?.value || "0", 10) || 0;
     const meses = parseInt(inputMesesRef.current?.value || "0", 10) || 0;
     const dias = parseInt(inputDiasRef.current?.value || "0", 10) || 0;
@@ -180,7 +179,7 @@ function Calculadora() {
 
     setCalculatorVisible(true);
     setCardsVisible(true);
-    scrollToResultado();
+    
   };
     
   const formatCurrencyInput = (value: string) => {
@@ -268,7 +267,7 @@ function Calculadora() {
           )}
         </div>
 
-        {textVisible2 && (
+        {/* {textVisible2 && (
           <div className="textCigarroZero">
             <h2>Você está prestes a começar uma jornada Cigarro Zero!</h2>
               <div className="listText">
@@ -283,7 +282,7 @@ function Calculadora() {
                   </span>
               </div>
           </div>
-        )}
+        )} */}
         
         {cardsVisible && (
                       <div className="cardContainer" ref={resultadoRef}>

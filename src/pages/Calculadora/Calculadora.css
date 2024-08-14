@@ -6,11 +6,13 @@
 .calculadora-container {
   margin: 0 auto;
   width: 100%;
+  padding-bottom: 63px;
 }
 
 .calculadora-content {
   background-color: #b0c9e7;
   border-radius: 0px 0px 60px 60px;
+  padding-bottom: 64px;
 }
 
 .calculadora-header {
@@ -71,7 +73,6 @@
   display: flex;
   flex-direction: column;
   background-color: #b0c9e7;
-  padding-bottom: 60px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -129,11 +130,6 @@
 .leftItens2 {
   margin-top: 20px;
 }
-
-/* .inputs {
-  display: flex;
-  flex-direction: column;
-} */
 
 .coluna h3 {
   font-family: "Inter", "sans-serif";
@@ -194,79 +190,6 @@ input[type="number"] {
 input[placeholder] {
   color: var(--primary250);
 }
-/*========== TEXTO INFORMATIVO CALCULADORA =============*/
-
-.textCigarroZero {
-  margin-top: 50px;
-  text-align: center;
-  padding: 0 0px 76px;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.textCigarroZero h2 {
-  font-size: 2.5rem;
-  padding-top: 64px;
-  padding-bottom: 24px;
-}
-
-.listText {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  text-align: justify;
-  /* padding: 24px; */
-}
-
-.listText p {
-  text-align: justify;
-  padding: 10px;
-}
-
-.list2 {
-  padding-left: 40px;
-  padding-right: 10px;
-}
-
-.listItens {
-  padding: 10px 0px;
-}
-
-.textLeft p {
-  margin-bottom: 76px;
-}
-
-/* .textCigarroZero {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-
-  h2 {
-    margin-top: 25px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    color: #003d84;
-  }
-
-  p {
-    padding-top: 30px;
-    padding-bottom: 50px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 19px;
-    text-align: justify;
-  }
-
-  ul {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    margin: 0 auto;
-    align-items: center;
-    font-size: 19px;
-  }
-} */
 
 /*========== RESULTADOS E CARDS =============*/
 
@@ -633,7 +556,7 @@ input[placeholder] {
 
 /* Ajustes para responsividade dos cards */
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .cardSection .cards {
     flex-direction: column;
     align-items: center;
@@ -643,9 +566,9 @@ input[placeholder] {
     width: 90%;
     max-width: 400px;
   }
-}
+} */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .cardSection .cards {
     flex-direction: column;
     align-items: center;
@@ -656,9 +579,9 @@ input[placeholder] {
     width: 100%;
     margin-bottom: 20px;
   }
-}
+} */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .cardSection .cards {
     flex-direction: column;
     align-items: center;

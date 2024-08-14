@@ -1,4 +1,4 @@
-import LinkedinIcon from "../../../../assets/Sobre-nos/linkedin-icon.svg";
+import LinkedinIcon from "../../../../assets/SobreNos/linkedin-icon.svg";
 import styles from "./styles.module.css";
 
 type MemberCardProps = {

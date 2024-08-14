@@ -2,10 +2,10 @@ import Layout from "../../components/Layout";
 import MemberCard from "./modules/MemberCard";
 import team from "./team";
 
-import HeroImg from "../../assets/Sobre-nos/hero-sobre-nos.png";
-import WavesImg from "../../assets/Sobre-nos/waves.png";
-import IbsonCabralImg from "../../assets/Sobre-nos/profiles/ibson-cabral.png";
-import LinkedinIcon from "../../assets/Sobre-nos/linkedin-icon.svg";
+import HeroImg from "../../assets/SobreNos/hero-sobre-nos.png";
+import WavesImg from "../../assets/SobreNos/waves.png";
+import IbsonCabralImg from "../../assets/SobreNos/profiles/ibson-cabral.png";
+import LinkedinIcon from "../../assets/SobreNos/linkedin-icon.svg";
 import styles from "./styles.module.css";
 
 export default function SobreNos() {

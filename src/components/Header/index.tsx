@@ -28,7 +28,7 @@ function Header() {
     window.scrollTo(0, 0);
   };
   const handleSobreNosClick = () => {
-    navigate("/Sobre-nos");
+    navigate("/sobre-nos");
     window.scrollTo(0, 0);
   };
 
@@ -76,7 +76,7 @@ function Header() {
             <li className="nav-list-item">Encontrar ajuda</li>
 
             <Link
-              to="/Sobre-nos"
+              to="/sobre-nos"
               onClick={handleSobreNosClick}
               className="header-btn"
             >

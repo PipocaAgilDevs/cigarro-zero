@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/Home";
 import InformeSe from "./pages/Informe-se";
 import InformeSeConteudo from "./pages/Informe-se/Conteudo";
-import SobreNos from "./pages/Sobre-nos/index.tsx";
+import SobreNos from "./pages/SobreNos/index.tsx";
 import Calculadora from "./pages/Calculadora/";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       element: <InformeSeConteudo />,
     },
     {
-      path: "/Sobre-nos",
+      path: "/sobre-nos",
       element: <SobreNos />,
     },
     {

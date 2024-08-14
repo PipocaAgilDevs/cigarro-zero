@@ -1,4 +1,4 @@
-import DefaultPhoto from "../../assets/Sobre-nos/profiles/default-photo.jpg";
+import DefaultPhoto from "../../assets/SobreNos/profiles/default-photo.jpg";
 
 const team = [
   {

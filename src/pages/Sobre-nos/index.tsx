@@ -14,9 +14,7 @@ export default function SobreNos() {
       <main className={styles.main}>
         <section className={styles.heroSection}>
           <div className={styles.hero}>
-            <div>
-              <img src={HeroImg} alt="casar com cão na praia" />
-            </div>
+            <img src={HeroImg} alt="casar com cão na praia" />
             <div>
               <p className={styles.pretitle}>CONHEÇA O PROJETO</p>
               <h1 className={styles.title}>CIGARRO ZERO</h1>
@@ -45,6 +43,7 @@ export default function SobreNos() {
             <img
               src={WavesImg}
               alt="imagem de fundo estilo onda para fins estéticos"
+              className={styles.waveImage}
             />
           </div>
         </section>

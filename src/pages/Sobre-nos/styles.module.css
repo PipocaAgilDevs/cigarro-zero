@@ -42,7 +42,7 @@
 }
 
 .textCard {
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .textCard h2 {
@@ -70,7 +70,16 @@
 .subhero {
   display: flex;
   gap: 40px;
-  padding-left: 60px;
+}
+
+@media (max-width: 1460px) {
+  .hero {
+    padding-right: 40px;
+  }
+
+  .subhero {
+    padding-left: 60px;
+  }
 }
 
 .paddingBottom {
@@ -146,4 +155,54 @@
   grid-template-rows: repeat(3, 240px);
   gap: 32px;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    padding-left: 60px;
+  }
+
+  .hero img {
+    width: 80%;
+  }
+
+  .waveImage {
+    display: none;
+  }
+
+  .textCard {
+    padding-right: 20px;
+  }
+
+  .teamSection header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    gap: 20px;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
 }

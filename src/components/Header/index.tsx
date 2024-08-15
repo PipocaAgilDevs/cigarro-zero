@@ -13,6 +13,7 @@ function Header() {
   };
 
   const scrollUp = () => {
+    setIsMenuOpen(false);
     window.scrollTo(0, 0);
   };
 
@@ -51,7 +52,7 @@ function Header() {
 
             <li className="nav-list-item">Encontrar ajuda</li>
 
-            <Link to="/Sobre-nos" className="header-btn" onClick={scrollUp}>
+            <Link to="/sobre-nos" className="header-btn" onClick={scrollUp}>
               <li className="nav-list-item">Sobre nós</li>
             </Link>
           </ul>

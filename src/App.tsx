@@ -26,7 +26,7 @@ function App() {
           element: <InformeSeConteudo />,
         },
         {
-          path: "Sobre-nos",
+          path: "sobre-nos",
           element: <SobreNos />,
         },
         {

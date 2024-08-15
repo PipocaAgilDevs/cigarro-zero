@@ -1,0 +1,29 @@
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 32px 16px 32px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 3px 3px 8px 0px #00000026;
+  text-align: center;
+}
+
+.memberCard .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 9999px;
+}
+
+.memberCard .name {
+  font-weight: 700;
+}
+
+.memberCard .linkedinLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  font-weight: 500;
+}

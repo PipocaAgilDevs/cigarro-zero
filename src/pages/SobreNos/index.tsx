@@ -1,4 +1,3 @@
-import Layout from "../../components/Layout";
 import MemberCard from "./modules/MemberCard";
 import team from "./team";
 
@@ -10,7 +9,6 @@ import styles from "./styles.module.css";
 
 export default function SobreNos() {
   return (
-    <Layout>
       <main className={styles.main}>
         <section className={styles.heroSection}>
           <div className={styles.hero}>
@@ -89,6 +87,5 @@ export default function SobreNos() {
           </div>
         </section>
       </main>
-    </Layout>
   );
 }

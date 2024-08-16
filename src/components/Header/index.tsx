@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../Logo";
 import "./header.css";
@@ -12,23 +12,8 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navigate = useNavigate();
-
-  const handleLogoClick = () => {
-    navigate("/");
-    window.scrollTo(0, 0);
-  };
-
-  const handleInformeSeClick = () => {
-    navigate("/Informe-se");
-    window.scrollTo(0, 0);
-  };
-  const handleCalculadoraClick = () => {
-    navigate("/calculadora");
-    window.scrollTo(0, 0);
-  };
-  const handleSobreNosClick = () => {
-    navigate("/sobre-nos");
+  const scrollUp = () => {
+    setIsMenuOpen(false);
     window.scrollTo(0, 0);
   };
 
@@ -51,35 +36,23 @@ function Header() {
   return (
     <header className={`header ${isScrolled ? "shadow-header" : ""}`}>
       <div className="header-content">
-        <Link to="/" onClick={handleLogoClick}>
+        <Link to="/" onClick={scrollUp}>
           <Logo />
         </Link>
 
         <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
           <ul className="nav-list">
-            <Link
-              to="/informe-se"
-              onClick={handleInformeSeClick}
-              className="header-btn"
-            >
+            <Link to="/informe-se" className="header-btn" onClick={scrollUp}>
               <li className="nav-list-item">Informe-se</li>
             </Link>
 
-            <Link
-              to="/calculadora"
-              onClick={handleCalculadoraClick}
-              className="header-btn"
-            >
+            <Link to="/calculadora" className="header-btn" onClick={scrollUp}>
               <li className="nav-list-item">Calculadora de saúde</li>
             </Link>
 
             <li className="nav-list-item">Encontrar ajuda</li>
 
-            <Link
-              to="/sobre-nos"
-              onClick={handleSobreNosClick}
-              className="header-btn"
-            >
+            <Link to="/sobre-nos" className="header-btn" onClick={scrollUp}>
               <li className="nav-list-item">Sobre nós</li>
             </Link>
           </ul>

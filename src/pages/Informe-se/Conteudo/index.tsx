@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import Layout from "../../../components/Layout";
 import RefAccordion from "./modules/RefAccorion";
 
 import styles from "./styles.module.css";
@@ -23,41 +22,39 @@ export default function InformeSeConteudo() {
   const content = contents[contentSlug as keyof typeof contents];
 
   return (
-    <Layout>
-      <div className={styles.container}>
-        <div className={styles.breadcrumb}>
-          <Link to="/">
-            <img src={HouseIcon} alt="home icon" sizes="24px" />
-          </Link>
-          <img src={ArrowRightIcon} alt="arrow right icon" sizes="16px" />
-          <p>{content.title}</p>
-        </div>
-        <main className={styles.main}>
-          <h1 className={styles.title}>{content.title}</h1>
-          <h2 className={styles.subtitle}>{content.subtitle}</h2>
-
-          <div className={styles.heroImage}>
-            <img src={content.heroImage} alt="hero image" />
-          </div>
-
-          <div className={styles.writerCard}>
-            <div className={styles.writerPhoto}>
-              <img src={content.writer.photo} alt="writer photo" />
-            </div>
-            <div>
-              <p>
-                Escrito por <strong>{content.writer.name}</strong>
-              </p>
-              <p>{content.writer.articleDate}</p>
-            </div>
-          </div>
-
-          <article className={styles.article}>
-            <div dangerouslySetInnerHTML={{ __html: content.article }} />
-            <RefAccordion />
-          </article>
-        </main>
+    <div className={styles.container}>
+      <div className={styles.breadcrumb}>
+        <Link to="/">
+          <img src={HouseIcon} alt="home icon" sizes="24px" />
+        </Link>
+        <img src={ArrowRightIcon} alt="arrow right icon" sizes="16px" />
+        <p>{content.title}</p>
       </div>
-    </Layout>
+      <main className={styles.main}>
+        <h1 className={styles.title}>{content.title}</h1>
+        <h2 className={styles.subtitle}>{content.subtitle}</h2>
+
+        <div className={styles.heroImage}>
+          <img src={content.heroImage} alt="hero image" />
+        </div>
+
+        <div className={styles.writerCard}>
+          <div className={styles.writerPhoto}>
+            <img src={content.writer.photo} alt="writer photo" />
+          </div>
+          <div>
+            <p>
+              Escrito por <strong>{content.writer.name}</strong>
+            </p>
+            <p>{content.writer.articleDate}</p>
+          </div>
+        </div>
+
+        <article className={styles.article}>
+          <div dangerouslySetInnerHTML={{ __html: content.article }} />
+          <RefAccordion />
+        </article>
+      </main>
+    </div>
   );
 }

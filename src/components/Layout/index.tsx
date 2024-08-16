@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout() {
   return (
     <main className="main">
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </main>
   );

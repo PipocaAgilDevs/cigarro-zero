@@ -1,12 +1,10 @@
 import { useState, useRef } from "react";
-import { images } from "../../assets/calculadora/images";
+import { images } from "../../assets/calculadora/images"
 import Accordion from "../../components/Accordion/Accordion";
-import Layout from "../../components/Layout/index";
 import "../Calculadora/Calculadora.css";
 
 function Calculadora() {
-  const [dias, setDias] = useState(0);
-  const [meses, setMeses] = useState(0);
+
   const inputAnosRef = useRef<HTMLInputElement>(null);
   const inputMesesRef = useRef<HTMLInputElement>(null);
   const inputDiasRef = useRef<HTMLInputElement>(null);
@@ -172,7 +170,6 @@ function Calculadora() {
     const cigarrosPorDia = parseInt(inputCigarrosRef.current?.value || "0", 10) || 0;
     const precoCigarro = parseFloat(inputPrecoRef.current?.value.replace(/[^0-9,]/g, '').replace(',', '.') || "0");
 
-
     calculateCardStates(anos, meses, dias);
 
     const totalDias = anos * 365 + meses * 30 + dias;
@@ -192,6 +189,11 @@ function Calculadora() {
       currency: "BRL",
     });
   };
+
+  function formatMoney(value: number) {
+    const formatNumber = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 3 });
+    return formatNumber.format(value);
+  }
 
   const handlePrecoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -217,7 +219,6 @@ function Calculadora() {
   };
 
   return (
-    <Layout>
       <div className="calculadora-container" ref={calculadoraRef}>
         <div className="calculadora-content">
           <div className="calculadora-header">
@@ -354,10 +355,7 @@ function Calculadora() {
                       <img src={images.Coins} alt="Moedas" />
                       <p>
                         <span className="dadosResult">
-                          R${" "}
-                          {parseFloat(
-                            totalMoneySaved.toLocaleString("pt-BR")
-                          ).toFixed(2)}
+                          {formatMoney(totalMoneySaved)}
                         </span>
                       </p>
                     </div>
@@ -434,7 +432,6 @@ function Calculadora() {
           </div>
         )}
       </div>
-    </Layout>
   );
 }
 

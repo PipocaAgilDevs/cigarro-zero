@@ -109,7 +109,7 @@
   flex-direction: column;
   flex: 1;
   margin-right: 2rem;
-  gap: 12px; /*tem que entender isso melhor*/
+  gap: 12px; 
 }
 
 .coluna:last-child {
@@ -426,7 +426,7 @@ input[placeholder] {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   /* transition: transform 0.3s ease; */
-  box-sizing: border-box; /* Garantir que padding e border sejam incluídos na largura e altura */
+  box-sizing: border-box; 
 }
 
 .cardSection .cards .cardInformacao.card-off .cardImage img {
@@ -575,54 +575,6 @@ input[placeholder] {
   }
 }
 
-/* Ajustes para responsividade dos cards */
-
-/* @media screen and (max-width: 650px) {
-  .cardTitle h3 {
-    font-size: 12px;
-    text-align: left;
-  }
-
-  .cardTitle img {
-    width: 17px;
-    margin-left: 10px;
-  }
-  .cardSection .cards {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-  }
-  .cardSection .cards .cardInformacao {
-    flex: 1;
-  }
-} */
-
-/* Ajustes para responsividade dos cards */
-
-/* @media screen and (max-width: 1024px) {
-  .cardSection .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cardInformacao {
-    width: 90%;
-    max-width: 400px;
-  }
-} */
-
-/* @media screen and (max-width: 768px) {
-  .cardSection .cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .cardInformacao {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-} */
 
 @media screen and (max-width: 650px) {
 
@@ -652,8 +604,7 @@ input[placeholder] {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* transition: transform 0.3s ease; */
-    box-sizing: border-box; /* Garantir que padding e border sejam incluídos na largura e altura */
+    box-sizing: border-box; 
   }
 
   .calculadora-forms h2{
@@ -677,7 +628,7 @@ input[placeholder] {
   }
 
   .cardInformacao {
-    width: 100%; /* Ajuste para garantir margem */
+    width: 100%; 
   }
 
   .cardTitle {

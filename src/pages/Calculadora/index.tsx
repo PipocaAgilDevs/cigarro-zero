@@ -159,9 +159,11 @@ function Calculadora() {
   const handleCalculate = () => {
     requestAnimationFrame(() => {
       const element = resultadoRef.current;
-      const rect = element.getBoundingClientRect();
-      const offset = window.scrollY + rect.top - 100;
-      window.scrollTo({ top: offset, behavior: "smooth" });
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const offset = window.scrollY + rect.top - 100;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }
     });
 
     const anos = parseInt(inputAnosRef.current?.value || "0", 10) || 0;

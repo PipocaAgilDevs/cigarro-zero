@@ -12,7 +12,7 @@ import RenatoRedogliaImg from "../../assets/SobreNos/profiles/renato-redoglia.jp
 import RodrigoCriscuoloImg from "../../assets/SobreNos/profiles/rodrigo-criscuolo.jpg";
 import LaviniaLimaImg from "../../assets/SobreNos/profiles/lavinia-lima.jpg";
 import MarceloCarvalhoImg from "../../assets/SobreNos/profiles/marcelo-carvalho.jpg";
-import GleiceMendesImg from "../../assets/SobreNos/profiles/gleice-mendes.jpg";
+import GlaiceMendesImg from "../../assets/SobreNos/profiles/glaice-mendes.jpg";
 
 const team = [
   {
@@ -103,7 +103,7 @@ const team = [
   {
     name: "Glaice Mendes",
     position: "QA Analyst",
-    photo: GleiceMendesImg,
+    photo: GlaiceMendesImg,
     linkedinURL: "https://www.linkedin.com/in/glaicemendes",
   },
 ];

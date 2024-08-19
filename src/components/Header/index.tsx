@@ -4,7 +4,7 @@ import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import Logo from "../Logo";
-import "./header.css";
+import "./styles.css";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

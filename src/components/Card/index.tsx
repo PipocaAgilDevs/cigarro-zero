@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./card.css";
+import "./styles.css";
 
 type CardProps = {
   title: string;

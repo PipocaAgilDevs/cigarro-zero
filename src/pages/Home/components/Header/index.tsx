@@ -1,7 +1,7 @@
 import heroImage from "../../../../assets/hero-image.svg";
 import "./Hero.modules.css";
 
-export default function HeroSection() {
+export default function Header() {
   return (
     <section className="banner">
       <div className="banner-content">

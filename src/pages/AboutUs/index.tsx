@@ -1,4 +1,4 @@
-import MemberCard from "./modules/MemberCard";
+import MemberCard from "./components/MemberCard";
 import team from "./team";
 
 import HeroImg from "../../assets/SobreNos/hero-sobre-nos.png";

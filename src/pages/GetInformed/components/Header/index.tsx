@@ -1,9 +1,9 @@
-import imgBanner from "../../../../assets/Informa-se/banner-img.png";
-import smallImgBanner from "../../../../assets/Informa-se/banner_mobile.png";
-import bannerWaves from "../../../../assets/Informa-se/waves.svg";
-import "./banner.css";
+import imgBanner from "../../../../assets/GetInformed/banner-img.png";
+import smallImgBanner from "../../../../assets/GetInformed/banner_mobile.png";
+import bannerWaves from "../../../../assets/GetInformed/waves.svg";
+import "./styles.css";
 
-export function Banner() {
+export function Header() {
   return (
     <div className="bg-informa-se">
       <section className="container">

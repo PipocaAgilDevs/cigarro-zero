@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./footer.css";
+import "./styles.css";
 import LogoWhite from "../../assets/logo-white.svg";
 import { useCallback } from "react";
 

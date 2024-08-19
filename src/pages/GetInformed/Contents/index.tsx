@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import RefAccordion from "./modules/RefAccorion";
+import RefAccordion from "./components/RefAccorion/index.tsx";
 
 import styles from "./styles.module.css";
-import HouseIcon from "../../../assets/Informa-se/Conteudo/icons/HouseIcon.svg";
-import ArrowRightIcon from "../../../assets/Informa-se/Conteudo/icons/ArrowRightIcon.svg";
+import HouseIcon from "../../../assets/GetInformed/Contents/icons/HouseIcon.svg";
+import ArrowRightIcon from "../../../assets/GetInformed/Contents/icons/ArrowRightIcon.svg";
 
-import contents, { contentsSlugs } from "./contents.ts";
+import contents, { contentsSlugs } from "./contents.tsx";
 
-export default function InformeSeConteudo() {
+export default function GetInformed() {
   const { contentSlug } = useParams();
 
   useEffect(() => {

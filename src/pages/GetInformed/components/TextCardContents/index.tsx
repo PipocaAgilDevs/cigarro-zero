@@ -1,6 +1,6 @@
-import "./titleSection.css";
+import "./styles.css";
 
-function TitleSection() {
+function TestCardContents() {
   return (
     <section className="section_informe-se">
       <div className="container">
@@ -13,4 +13,4 @@ function TitleSection() {
   );
 }
 
-export default TitleSection;
+export default TestCardContents;

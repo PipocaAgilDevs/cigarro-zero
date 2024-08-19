@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { images } from "../../assets/calculadora/images"
+import { images } from "../../assets/Calculator/images"
 import Accordion from "../../components/Accordion/Accordion";
-import "../Calculadora/Calculadora.css";
+import "./styles.css";
 
 function Calculadora() {
 

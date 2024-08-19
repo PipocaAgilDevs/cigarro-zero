@@ -1,13 +1,13 @@
 import Card from "../../../../components/Card";
-import "./EntendaTabagismo.css";
-import EntendendoOTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/entendendo-o-tabagismo-conteudo.jpg";
-import ImpactoDoCigarroImg from "../../../../assets/Informa-se/Conteudo/heros/impacto-do-cigarro-conteudo.png";
-import BeneficiosDePararDeFumarImg from "../../../../assets/Informa-se/Conteudo/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../../assets/Informa-se/Conteudo/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import "./styles.css";
+import EntendendoOTabagismoImg from "../../../../assets/GetInformed/Contents/heros/entendendo-o-tabagismo-conteudo.jpg";
+import ImpactoDoCigarroImg from "../../../../assets/GetInformed/Contents/heros/impacto-do-cigarro-conteudo.png";
+import BeneficiosDePararDeFumarImg from "../../../../assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../../assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
 
 import { useNavigate } from "react-router-dom";
 
-const EntendaTabagismo = () => {
+const UnderstandAboutSmoking = () => {
   const navigate = useNavigate();
 
   return (
@@ -54,4 +54,4 @@ const EntendaTabagismo = () => {
   );
 };
 
-export default EntendaTabagismo;
+export default UnderstandAboutSmoking;

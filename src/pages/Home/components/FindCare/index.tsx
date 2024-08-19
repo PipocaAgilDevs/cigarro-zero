@@ -1,5 +1,5 @@
 import ButtonCTA from "../../../../components/ButtonCTA";
-import "./FindHelp.css";
+import "./styles.css";
 
 export default function FindHelp() {
   return (

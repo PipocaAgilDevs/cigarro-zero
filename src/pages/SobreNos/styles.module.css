@@ -152,7 +152,6 @@
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(4, 256px);
-  grid-template-rows: repeat(3, 240px);
   gap: 32px;
   justify-content: center;
 }

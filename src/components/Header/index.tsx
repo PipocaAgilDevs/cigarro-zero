@@ -9,11 +9,10 @@ import "./styles.css";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const headerRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
 
-  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -33,12 +32,11 @@ function Header() {
     };
 
     window.addEventListener("scroll", scrollHeader);
-    
+
     return () => {
       window.removeEventListener("scroll", scrollHeader);
     };
   }, []);
-
 
   useEffect(() => {
     const adjustBodyPadding = () => {
@@ -54,7 +52,6 @@ function Header() {
       window.removeEventListener("resize", adjustBodyPadding);
     };
   }, []);
-
 
   return (
     <header
@@ -94,10 +91,18 @@ function Header() {
               </li>
             </Link>
 
-            <li className="nav-list-item">
-              Encontrar ajuda
-              <SlArrowRight className="menu-arrow" />
-            </li>
+            <Link
+              to="/encontrar-ajuda"
+              className={`header-btn ${
+                location.pathname === "/encontrar-ajuda" ? "active" : ""
+              }`}
+              onClick={scrollUp}
+            >
+              <li className="nav-list-item">
+                Encontrar ajuda
+                <SlArrowRight className="menu-arrow" />
+              </li>
+            </Link>
 
             <Link
               to="/sobre-nos"

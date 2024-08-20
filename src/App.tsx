@@ -5,6 +5,7 @@ import Calculator from "./pages/Calculator/index.tsx";
 import Layout from "./components/Layout/index.tsx";
 import GetInformed from "./pages/GetInformed/index.tsx";
 import Contents from "./pages/GetInformed/Contents/index.tsx";
+import FindHelp from "./pages/FindHelp/index.tsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "informe-se/:contentSlug",
           element: <Contents />,
+        },
+        {
+          path: "encontrar-ajuda",
+          element: <FindHelp />,
         },
         {
           path: "sobre-nos",

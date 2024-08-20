@@ -3,8 +3,8 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import RefAccordion from "./components/RefAccorion/index.tsx";
 
 import styles from "./styles.module.css";
-import HouseIcon from "../../../assets/GetInformed/Contents/icons/HouseIcon.svg";
-import ArrowRightIcon from "../../../assets/GetInformed/Contents/icons/ArrowRightIcon.svg";
+import HouseIcon from "../../../assets/GetInformed/Contents/Icons/HouseIcon.svg";
+import ArrowRightIcon from "../../../assets/GetInformed/Contents/Icons/ArrowRightIcon.svg";
 
 import contents, { contentsSlugs } from "./contents.tsx";
 

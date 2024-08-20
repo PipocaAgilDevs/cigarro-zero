@@ -1,11 +1,11 @@
-import EntendendoOTabagismoImg from "../../../assets/GetInformed/Contents/heros/entendendo-o-tabagismo-conteudo.jpg";
-import ImpactoDoCigarroImg from "../../../assets/GetInformed/Contents/heros/impacto-do-cigarro-conteudo.png";
-import BeneficiosDePararDeFumarImg from "../../../assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
-import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "../../../assets/GetInformed/Contents/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
-import CigarroEletronicoMitosEVerdadesImg from "../../../assets/GetInformed/Contents/heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
-import RobertaEscritoraImg from "../../../assets/GetInformed/Contents/writers/roberta-escritora.jpg";
-import GabrielaEscritoraImg from "../../../assets/GetInformed/Contents/writers/gabriela-escritora.jpg";
+import EntendendoOTabagismoImg from "../../../assets/GetInformed/Contents/Heros/entendendo-o-tabagismo-conteudo.jpg";
+import ImpactoDoCigarroImg from "../../../assets/GetInformed/Contents/Heros/impacto-do-cigarro-conteudo.png";
+import BeneficiosDePararDeFumarImg from "../../../assets/GetInformed/Contents/Heros/beneficios-de-parar-de-fumar-conteudo.jpg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../assets/GetInformed/Contents/Heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "../../../assets/GetInformed/Contents/Heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
+import CigarroEletronicoMitosEVerdadesImg from "../../../assets/GetInformed/Contents/Heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
+import RobertaEscritoraImg from "../../../assets/GetInformed/Contents/Writers/roberta-escritora.jpg";
+import GabrielaEscritoraImg from "../../../assets/GetInformed/Contents/Writers/gabriela-escritora.jpg";
 
 const contents = {
   "entendendo-o-tabagismo": {

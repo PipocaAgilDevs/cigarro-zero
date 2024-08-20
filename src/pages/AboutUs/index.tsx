@@ -1,13 +1,13 @@
 import MemberCard from "./components/MemberCard";
 import team from "./team";
 
-import HeroImg from "../../assets/SobreNos/hero-sobre-nos.png";
-import WavesImg from "../../assets/SobreNos/waves.png";
-import IbsonCabralImg from "../../assets/SobreNos/profiles/ibson-cabral.png";
-import LinkedinIcon from "../../assets/SobreNos/linkedin-icon.svg";
+import HeroImg from "../../assets/AboutUs/hero-sobre-nos.png";
+import WavesImg from "../../assets/AboutUs/waves.png";
+import IbsonCabralImg from "../../assets/AboutUs/Profiles/ibson-cabral.png";
+import LinkedinIcon from "../../assets/AboutUs/linkedin-icon.svg";
 import styles from "./styles.module.css";
 
-export default function SobreNos() {
+export default function AboutUs() {
   return (
       <main className={styles.main}>
         <section className={styles.heroSection}>

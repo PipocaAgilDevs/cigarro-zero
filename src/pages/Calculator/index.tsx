@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 
-import { images } from "../../assets/Calculator/images";
+import { images } from "@assets/Calculator/images";
+
 import Accordion from "../../components/Accordion/Accordion";
 import "./styles.css";
 

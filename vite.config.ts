@@ -9,4 +9,9 @@ export default defineConfig({
       localsConvention: "camelCaseOnly", // Optional: For camelCase class names in TS
     },
   },
+  resolve: {
+    alias: {
+      "@assets": "/src/assets",
+    },
+  },
 });

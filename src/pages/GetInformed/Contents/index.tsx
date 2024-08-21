@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 
-import ArrowRightIcon from "../../../assets/GetInformed/Contents/Icons/ArrowRightIcon.svg";
-import HouseIcon from "../../../assets/GetInformed/Contents/Icons/HouseIcon.svg";
-import RefAccordion from "./components/RefAccorion/index.tsx";
+import ArrowRightIcon from "@assets/GetInformed/Contents/icons/ArrowRightIcon.svg";
+import HouseIcon from "@assets/GetInformed/Contents/icons/HouseIcon.svg";
+
+import RefAccordion from "./components/RefAccordion/index.tsx";
 import contents, { contentsSlugs } from "./contents.tsx";
 import styles from "./styles.module.css";
 

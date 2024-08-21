@@ -1,4 +1,5 @@
-import heroImage from "../../../../assets/hero-image.svg";
+import heroImage from "@assets/hero-image.svg";
+
 import "./Hero.modules.css";
 
 export default function Header() {

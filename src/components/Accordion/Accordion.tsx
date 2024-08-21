@@ -1,8 +1,9 @@
 // Accordion.tsx
 import { ReactNode, useState } from "react";
 
-import setaBaixo from "../../assets/Calculator/setaB.svg";
-import setaCima from "../../assets/Calculator/setaC.svg";
+import setaBaixo from "@assets/Calculator/setaB.svg";
+import setaCima from "@assets/Calculator/setaC.svg";
+
 import "./styles.css";
 
 // Define a interface para as propriedades do componente

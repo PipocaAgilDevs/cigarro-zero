@@ -1,7 +1,8 @@
-import IbsonCabralImg from "../../assets/AboutUs/Profiles/ibson-cabral.png";
-import HeroImg from "../../assets/AboutUs/hero-sobre-nos.png";
-import LinkedinIcon from "../../assets/AboutUs/linkedin-icon.svg";
-import WavesImg from "../../assets/AboutUs/waves.png";
+import IbsonCabralImg from "@assets/AboutUs/Profiles/ibson-cabral.png";
+import HeroImg from "@assets/AboutUs/hero-sobre-nos.png";
+import LinkedinIcon from "@assets/AboutUs/linkedin-icon.svg";
+import WavesImg from "@assets/AboutUs/waves.png";
+
 import MemberCard from "./components/MemberCard";
 import styles from "./styles.module.css";
 import team from "./team";

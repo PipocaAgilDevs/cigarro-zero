@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import ArrowBottomIcon from "../../../../../assets/GetInformed/Contents/Icons/ArrowBottomIcon.svg";
-import ArrowTopIcon from "../../../../../assets/GetInformed/Contents/Icons/ArrowTopIcon.svg";
+import ArrowBottomIcon from "@assets/GetInformed/Contents/icons/ArrowBottomIcon.svg";
+import ArrowTopIcon from "@assets/GetInformed/Contents/icons/ArrowTopIcon.svg";
+
 import styles from "./styles.module.css";
 
 export default function RefAccordion() {

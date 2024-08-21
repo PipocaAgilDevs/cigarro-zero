@@ -1,6 +1,7 @@
-import imgBanner from "../../../../assets/GetInformed/banner-img.png";
-import smallImgBanner from "../../../../assets/GetInformed/banner_mobile.png";
-import bannerWaves from "../../../../assets/GetInformed/waves.svg";
+import imgBanner from "@assets/GetInformed/banner-img.png";
+import smallImgBanner from "@assets/GetInformed/banner_mobile.png";
+import bannerWaves from "@assets/GetInformed/waves.svg";
+
 import "./styles.css";
 
 export function Header() {

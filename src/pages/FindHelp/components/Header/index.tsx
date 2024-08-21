@@ -1,4 +1,5 @@
-import heroImage from "../../../../assets/FindHelp/hero-image-banner.svg";
+import heroImage from "@assets/FindHelp/hero-image-banner.svg";
+
 import Map from "../../components/Map";
 import "./styles.css";
 

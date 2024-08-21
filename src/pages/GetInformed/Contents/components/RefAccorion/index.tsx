@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import styles from "./styles.module.css";
 import ArrowBottomIcon from "../../../../../assets/GetInformed/Contents/Icons/ArrowBottomIcon.svg";
 import ArrowTopIcon from "../../../../../assets/GetInformed/Contents/Icons/ArrowTopIcon.svg";
+import styles from "./styles.module.css";
 
 export default function RefAccordion() {
   const [isOpen, setIsOpen] = useState(false);

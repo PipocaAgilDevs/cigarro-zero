@@ -109,7 +109,7 @@
   flex-direction: column;
   flex: 1;
   margin-right: 2rem;
-  gap: 12px; 
+  gap: 12px;
 }
 
 .coluna:last-child {
@@ -426,7 +426,7 @@ input[placeholder] {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   /* transition: transform 0.3s ease; */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .cardSection .cards .cardInformacao.card-off .cardImage img {
@@ -439,7 +439,7 @@ input[placeholder] {
 .cardSection .cards .cardInformacao.card-on img {
   max-width: 100%;
   height: auto;
-  
+
   border-radius: 20px;
 }
 
@@ -497,7 +497,7 @@ input[placeholder] {
     padding: 0;
   }
 
-  .calculadora-text-container{
+  .calculadora-text-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -575,10 +575,7 @@ input[placeholder] {
   }
 }
 
-
 @media screen and (max-width: 650px) {
-
-
   .cardContent {
     padding: 20px;
   }
@@ -604,10 +601,10 @@ input[placeholder] {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
 
-  .calculadora-forms h2{
+  .calculadora-forms h2 {
     font-size: 20px;
   }
 
@@ -628,7 +625,7 @@ input[placeholder] {
   }
 
   .cardInformacao {
-    width: 100%; 
+    width: 100%;
   }
 
   .cardTitle {
@@ -655,29 +652,27 @@ input[placeholder] {
   .resultItens p {
     font-size: 16px;
   }
-  
 
   .dadosResult {
     font-size: 32px;
     font-weight: bold;
   }
-  
+
   .resultCardTwoFirst {
     display: flex;
     gap: 16px;
   }
-  .calculadora-all-inputs{
+  .calculadora-all-inputs {
     display: flex;
     flex-direction: column;
     gap: 48px;
   }
-  
-  .calculadora-input-container{
+
+  .calculadora-input-container {
     display: flex;
     flex-direction: column;
     gap: 48px;
   }
-  
 }
 
 ::-webkit-input-placeholder {
@@ -690,19 +685,17 @@ input[placeholder] {
   display: flex;
 }
 
-
-
-.inputs{
+.inputs {
   display: flex;
   gap: 6px;
   align-items: flex-end;
 }
 
-.inputs label{
+.inputs label {
   font-size: 14px;
 }
 
-.calculadora-all-inputs{
+.calculadora-all-inputs {
   display: flex;
   flex-direction: column;
   gap: 40px;

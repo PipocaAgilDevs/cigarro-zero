@@ -1,0 +1,71 @@
+.map__container {
+  width: 100%;
+  height: 786px;
+  margin: 0 auto;
+  border-radius: 30px;
+  position: relative;
+}
+
+.map {
+  height: 786px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 157px;
+}
+
+.map__container {
+  height: 100%;
+  width: 100%;
+}
+
+.search {
+  position: absolute; /* Posiciona sobre o mapa */
+  top: 10px; /* Distância do topo */
+  left: 10px; /* Distância da esquerda */
+  height: 48px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex; /* Usa flexbox para alinhar o input e o ícone */
+  align-items: center; /* Alinha o ícone e o input verticalmente */
+  z-index: 1000; /* Garante que fique sobre o mapa */
+}
+
+.search__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px 14px;
+}
+
+.search__input {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  flex: 1; /* Faz com que o input ocupe o espaço disponível */
+  outline: none;
+}
+
+.search__icon {
+  color: #555;
+}
+
+.map__title {
+  font-family: "Oswald", "sans-serif";
+  color: var(--primary300);
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .map {
+    padding: 20px;
+  }
+
+  .search__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

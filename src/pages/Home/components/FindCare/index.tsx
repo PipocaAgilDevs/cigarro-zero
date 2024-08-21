@@ -10,8 +10,8 @@ export default function FindHelp() {
         </p>
         <p className="sub-text-cta">
           Buscar ajuda profissional aumenta significativamente o sucesso de
-          conseguir parar de fumar.<br></br> O Sistema Único de Saúde (SUS) oferece
-          tratamentos integrais e gratuitos!
+          conseguir parar de fumar.<br></br> O Sistema Único de Saúde (SUS)
+          oferece tratamentos integrais e gratuitos!
         </p>
         <ButtonCTA>Encontre atendimento perto de você</ButtonCTA>
       </section>

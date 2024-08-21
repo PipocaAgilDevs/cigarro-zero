@@ -1,10 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
+
+import Layout from "./components/Layout/index.tsx";
 import AboutUs from "./pages/AboutUs/index.tsx";
 import Calculator from "./pages/Calculator/index.tsx";
-import Layout from "./components/Layout/index.tsx";
-import GetInformed from "./pages/GetInformed/index.tsx";
+import FindHelp from "./pages/FindHelp/index.tsx";
 import Contents from "./pages/GetInformed/Contents/index.tsx";
+import GetInformed from "./pages/GetInformed/index.tsx";
+import Home from "./pages/Home";
 
 function App() {
   const routes = createBrowserRouter([
@@ -31,6 +33,10 @@ function App() {
         {
           path: "calculadora",
           element: <Calculator />,
+        },
+        {
+          path: "encontrar-ajuda",
+          element: <FindHelp />,
         },
       ],
     },

@@ -1,7 +1,8 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./styles.css";
-import LogoWhite from "../../assets/logo-white.svg";
 import { useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+import LogoWhite from "../../assets/logo-white.svg";
+import "./styles.css";
 
 function Footer() {
   const location = useLocation();

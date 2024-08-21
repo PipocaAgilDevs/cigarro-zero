@@ -1,11 +1,11 @@
-import Card from "../../../../components/Card";
-import "./styles.css";
-import EntendendoOTabagismoImg from "../../../../assets/GetInformed/Contents/Heros/entendendo-o-tabagismo-conteudo.jpg";
-import ImpactoDoCigarroImg from "../../../../assets/GetInformed/Contents/Heros/impacto-do-cigarro-conteudo.png";
+import { useNavigate } from "react-router-dom";
+
 import BeneficiosDePararDeFumarImg from "../../../../assets/GetInformed/Contents/Heros/beneficios-de-parar-de-fumar-conteudo.jpg";
 import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "../../../../assets/GetInformed/Contents/Heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
-
-import { useNavigate } from "react-router-dom";
+import EntendendoOTabagismoImg from "../../../../assets/GetInformed/Contents/Heros/entendendo-o-tabagismo-conteudo.jpg";
+import ImpactoDoCigarroImg from "../../../../assets/GetInformed/Contents/Heros/impacto-do-cigarro-conteudo.png";
+import Card from "../../../../components/Card";
+import "./styles.css";
 
 const UnderstandAboutSmoking = () => {
   const navigate = useNavigate();

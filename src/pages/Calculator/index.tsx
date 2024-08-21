@@ -1,10 +1,10 @@
-import { useState, useRef } from "react";
-import { images } from "../../assets/Calculator/images"
+import { useRef, useState } from "react";
+
+import { images } from "../../assets/Calculator/images";
 import Accordion from "../../components/Accordion/Accordion";
 import "./styles.css";
 
 function Calculadora() {
-
   const inputAnosRef = useRef<HTMLInputElement>(null);
   const inputMesesRef = useRef<HTMLInputElement>(null);
   const inputDiasRef = useRef<HTMLInputElement>(null);
@@ -169,8 +169,12 @@ function Calculadora() {
     const anos = parseInt(inputAnosRef.current?.value || "0", 10) || 0;
     const meses = parseInt(inputMesesRef.current?.value || "0", 10) || 0;
     const dias = parseInt(inputDiasRef.current?.value || "0", 10) || 0;
-    const cigarrosPorDia = parseInt(inputCigarrosRef.current?.value || "0", 10) || 0;
-    const precoCigarro = parseFloat(inputPrecoRef.current?.value.replace(/[^0-9,]/g, '').replace(',', '.') || "0");
+    const cigarrosPorDia =
+      parseInt(inputCigarrosRef.current?.value || "0", 10) || 0;
+    const precoCigarro = parseFloat(
+      inputPrecoRef.current?.value.replace(/[^0-9,]/g, "").replace(",", ".") ||
+        "0",
+    );
 
     calculateCardStates(anos, meses, dias);
 
@@ -193,7 +197,12 @@ function Calculadora() {
   };
 
   function formatMoney(value: number) {
-    const formatNumber = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 3 });
+    const formatNumber = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 3,
+    });
     return formatNumber.format(value);
   }
 
@@ -221,219 +230,217 @@ function Calculadora() {
   };
 
   return (
-      <div className="calculadora-container" ref={calculadoraRef}>
-        <div className="calculadora-content">
-          <div className="calculadora-header">
-            <div className="calculadora-text-container">
-              <h1>CALCULADORA DE SAÚDE</h1>
-              <p>
-                Quer parar de fumar ou precisa de um incentivo extra? <br></br>
-                Descubra quanto tempo é necessário para sua saúde<br></br> se
-                restabelecer dos efeitos do cigarro
-              </p>
-              <p>
-                <span className="calculadora-text-small">
-                  Simule e descubra os{" "}
-                  <span className="calculadora-text-small-bolder">
-                    benefícios de parar de fumar!
-                  </span>
+    <div className="calculadora-container" ref={calculadoraRef}>
+      <div className="calculadora-content">
+        <div className="calculadora-header">
+          <div className="calculadora-text-container">
+            <h1>CALCULADORA DE SAÚDE</h1>
+            <p>
+              Quer parar de fumar ou precisa de um incentivo extra? <br></br>
+              Descubra quanto tempo é necessário para sua saúde<br></br> se
+              restabelecer dos efeitos do cigarro
+            </p>
+            <p>
+              <span className="calculadora-text-small">
+                Simule e descubra os{" "}
+                <span className="calculadora-text-small-bolder">
+                  benefícios de parar de fumar!
                 </span>
-              </p>
-            </div>
-            <div className="calculadora-banner-container">
-              <img
-                src={images.Homem}
-                className="calculadora-banner-image"
-                alt=""
-              />
-            </div>
+              </span>
+            </p>
           </div>
-
-          {calculatorVisible && (
-            <div className="calculadora">
-              <div className="calculadora-forms">
-                <h2>
-                  Preencha as informações abaixo e surpreenda-se com os
-                  resultados
-                </h2>
-                <div className="calculadora-all-inputs">
-                  <div className="calculadora-input-container">
-                    <div className="coluna leftItens">
-                      <h3>Há quanto tempo você parou de fumar?</h3>
-                      <div className="inputs">
-                        <input
-                          ref={inputAnosRef}
-                          type="number"
-                          placeholder="0"
-                          className="inputCalc"
-                          min="0"
-                        />
-                        <label htmlFor="">anos</label>
-                        <input
-                          ref={inputMesesRef}
-                          type="number"
-                          placeholder="0"
-                          className="inputCalc"
-                        />
-                        <label htmlFor="">meses</label>
-                        <input
-                          ref={inputDiasRef}
-                          type="number"
-                          placeholder="0"
-                          className="inputCalc"
-                        />
-                        <label htmlFor="">dias</label>
-                      </div>
-                    </div>
-                    <div className="coluna rightItens">
-                      <h3>Quantos cigarros você fumava por dia?</h3>
-                      <div className="inputs">
-                        <input
-                          ref={inputCigarrosRef}
-                          type="number"
-                          placeholder="0"
-                          className="inputCalc"
-                        />
-
-                        <span className="obs">
-                          Obs.: 20 cigarro é igual a um maço.
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="calculadora-input">
-                    <div className="coluna leftItens2">
-                      <h3>Quantos reais você pagava no maço?</h3>
-                      <input
-                        ref={inputPrecoRef}
-                        type="text"
-                        placeholder="R$ 00,00"
-                        className="inputCalc"
-                        onChange={handlePrecoChange}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="btnResultado">
-                  <button onClick={handleCalculate}>Ver Resultado</button>
-                </div>
-              </div>
-            </div>
-          )}
+          <div className="calculadora-banner-container">
+            <img
+              src={images.Homem}
+              className="calculadora-banner-image"
+              alt=""
+            />
+          </div>
         </div>
 
-        {cardsVisible && (
-          <div className="cardContainer" ref={resultadoRef}>
-            <div className="cardContent">
-              <h2>Resultado</h2>
-              <div className="Banerresultados">
-                <div className="resultItens">
-                  <div className="resultCardTwoFirst">
-                    <div className="resultCard">
-                      <div className="resultIcon">
-                        <img src={images.Calendar} alt="Calendario" />
-                        <p>
-                          <span className="dadosResult">
-                            {totalDays.toLocaleString("pt-BR")}
-                          </span>
-                        </p>
-                      </div>
-                      <p className="textResult">dias sem fumar</p>
-                    </div>
-                    <div className="resultCard">
-                      <div className="resultIcon">
-                        <img src={images.Confete} alt="Confete" />
-                        <p>
-                          <span className="dadosResult">
-                            {totalCigarettesAvoided.toLocaleString("pt-BR")}
-                          </span>
-                        </p>
-                      </div>
-                      <p className="textResult">Cigarros evitados</p>
+        {calculatorVisible && (
+          <div className="calculadora">
+            <div className="calculadora-forms">
+              <h2>
+                Preencha as informações abaixo e surpreenda-se com os resultados
+              </h2>
+              <div className="calculadora-all-inputs">
+                <div className="calculadora-input-container">
+                  <div className="coluna leftItens">
+                    <h3>Há quanto tempo você parou de fumar?</h3>
+                    <div className="inputs">
+                      <input
+                        ref={inputAnosRef}
+                        type="number"
+                        placeholder="0"
+                        className="inputCalc"
+                        min="0"
+                      />
+                      <label htmlFor="">anos</label>
+                      <input
+                        ref={inputMesesRef}
+                        type="number"
+                        placeholder="0"
+                        className="inputCalc"
+                      />
+                      <label htmlFor="">meses</label>
+                      <input
+                        ref={inputDiasRef}
+                        type="number"
+                        placeholder="0"
+                        className="inputCalc"
+                      />
+                      <label htmlFor="">dias</label>
                     </div>
                   </div>
-                  <div className="resultCard">
-                    <div className="resultIcon">
-                      <img src={images.Coins} alt="Moedas" />
-                      <p>
-                        <span className="dadosResult">
-                          {formatMoney(totalMoneySaved)}
-                        </span>
-                      </p>
+                  <div className="coluna rightItens">
+                    <h3>Quantos cigarros você fumava por dia?</h3>
+                    <div className="inputs">
+                      <input
+                        ref={inputCigarrosRef}
+                        type="number"
+                        placeholder="0"
+                        className="inputCalc"
+                      />
+
+                      <span className="obs">
+                        Obs.: 20 cigarro é igual a um maço.
+                      </span>
                     </div>
-                    <p className="textResult">a mais no seu bolso!</p>
+                  </div>
+                </div>
+                <div className="calculadora-input">
+                  <div className="coluna leftItens2">
+                    <h3>Quantos reais você pagava no maço?</h3>
+                    <input
+                      ref={inputPrecoRef}
+                      type="text"
+                      placeholder="R$ 00,00"
+                      className="inputCalc"
+                      onChange={handlePrecoChange}
+                    />
                   </div>
                 </div>
               </div>
-
-              <div className="cardSection">
-                <div className="cards">
-                  {cards.map((card, index) => (
-                    <div
-                      key={card.id}
-                      className={`cardInformacao ${
-                        cardStates[index] ? "card-on" : "card-off"
-                      }`}
-                    >
-                      <div className="cardImage">
-                        <img
-                          src={
-                            cardStates[index]
-                              ? images[card.imageOn]
-                              : images[card.imageOff]
-                          }
-                        />
-                      </div>
-                      <div className="cardText">
-                        <div className="cardTitle">
-                          <h3 className="titleCard">{card.Title}</h3>
-                          <img
-                            className="trofeu"
-                            src={
-                              cardStates[index]
-                                ? images[card.extraImageOn]
-                                : images[card.extraImageOff]
-                            }
-                            alt="Extra"
-                          />
-                        </div>
-                        <p className="cardSubtitle">{card.Text}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="btnResultado">
+                <button onClick={handleCalculate}>Ver Resultado</button>
               </div>
-
-              <div className="button">
-                <button onClick={handleReset}>Calcular novamente</button>
-              </div>
-              <Accordion title="Referências">
-                <p>
-                  OPAS, Organização Pan-Americana da Saúde. Disponível em:{" "}
-                  <a href="https://www.paho.org/pt/101-razoes-para-parar-fumar">
-                    https://www.paho.org/pt/101-razoes-para-parar-fumar
-                  </a>
-                </p>
-                <p>
-                  MINISTÉRIO DA SAÚDE, Biblioteca Virtual em Saúde. Disponível
-                  em:
-                  <a href="https://bvsms.saude.gov.br/tabagismo-13/">
-                    {" "}
-                    https://bvsms.saude.gov.br/tabagismo-13/
-                  </a>
-                </p>
-                <p>
-                  AMERICAN CANCER SOCIETY. Disponível em:
-                  <a href="https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html">
-                    {" "}
-                    https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html
-                  </a>{" "}
-                </p>
-              </Accordion>
             </div>
           </div>
         )}
       </div>
+
+      {cardsVisible && (
+        <div className="cardContainer" ref={resultadoRef}>
+          <div className="cardContent">
+            <h2>Resultado</h2>
+            <div className="Banerresultados">
+              <div className="resultItens">
+                <div className="resultCardTwoFirst">
+                  <div className="resultCard">
+                    <div className="resultIcon">
+                      <img src={images.Calendar} alt="Calendario" />
+                      <p>
+                        <span className="dadosResult">
+                          {totalDays.toLocaleString("pt-BR")}
+                        </span>
+                      </p>
+                    </div>
+                    <p className="textResult">dias sem fumar</p>
+                  </div>
+                  <div className="resultCard">
+                    <div className="resultIcon">
+                      <img src={images.Confete} alt="Confete" />
+                      <p>
+                        <span className="dadosResult">
+                          {totalCigarettesAvoided.toLocaleString("pt-BR")}
+                        </span>
+                      </p>
+                    </div>
+                    <p className="textResult">Cigarros evitados</p>
+                  </div>
+                </div>
+                <div className="resultCard">
+                  <div className="resultIcon">
+                    <img src={images.Coins} alt="Moedas" />
+                    <p>
+                      <span className="dadosResult">
+                        {formatMoney(totalMoneySaved)}
+                      </span>
+                    </p>
+                  </div>
+                  <p className="textResult">a mais no seu bolso!</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="cardSection">
+              <div className="cards">
+                {cards.map((card, index) => (
+                  <div
+                    key={card.id}
+                    className={`cardInformacao ${
+                      cardStates[index] ? "card-on" : "card-off"
+                    }`}
+                  >
+                    <div className="cardImage">
+                      <img
+                        src={
+                          cardStates[index]
+                            ? images[card.imageOn]
+                            : images[card.imageOff]
+                        }
+                      />
+                    </div>
+                    <div className="cardText">
+                      <div className="cardTitle">
+                        <h3 className="titleCard">{card.Title}</h3>
+                        <img
+                          className="trofeu"
+                          src={
+                            cardStates[index]
+                              ? images[card.extraImageOn]
+                              : images[card.extraImageOff]
+                          }
+                          alt="Extra"
+                        />
+                      </div>
+                      <p className="cardSubtitle">{card.Text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="button">
+              <button onClick={handleReset}>Calcular novamente</button>
+            </div>
+            <Accordion title="Referências">
+              <p>
+                OPAS, Organização Pan-Americana da Saúde. Disponível em:{" "}
+                <a href="https://www.paho.org/pt/101-razoes-para-parar-fumar">
+                  https://www.paho.org/pt/101-razoes-para-parar-fumar
+                </a>
+              </p>
+              <p>
+                MINISTÉRIO DA SAÚDE, Biblioteca Virtual em Saúde. Disponível em:
+                <a href="https://bvsms.saude.gov.br/tabagismo-13/">
+                  {" "}
+                  https://bvsms.saude.gov.br/tabagismo-13/
+                </a>
+              </p>
+              <p>
+                AMERICAN CANCER SOCIETY. Disponível em:
+                <a href="https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html">
+                  {" "}
+                  https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html
+                </a>{" "}
+              </p>
+            </Accordion>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -1,6 +1,5 @@
 import heroImage from "@assets/FindHelp/hero-image-banner.svg";
 
-import Map from "../../components/Map";
 import "./styles.css";
 
 export default function Header() {
@@ -34,12 +33,6 @@ export default function Header() {
           alt="quatro pessoas abraçadas de costas"
         />
       </div>
-
-      <Map />
-
-      {/* <div className="map__container">
-        <h3 className="map__title">Encontre uma unidade de saúde perto de você</h3>
-      </div> */}
     </section>
   );
 }

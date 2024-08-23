@@ -5,7 +5,7 @@ import {
   Autocomplete,
   GoogleMap,
   InfoWindow,
-  LoadScript,
+  LoadScriptNext,
   Marker,
 } from "@react-google-maps/api";
 
@@ -20,19 +20,21 @@ interface MarkerType {
   photoUrl?: string;
 }
 
+// São Paulo
 const center = {
   lat: -23.55052,
   lng: -46.633308,
-};
+}; 
 
 const libraries: "places"[] = ["places"];
 
 export default function Map() {
   const [markers, setMarkers] = useState<MarkerType[]>([]);
-  const [autocomplete, setAutocomplete] =
-    useState<google.maps.places.Autocomplete | null>(null);
+  const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
   const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
   const [map, setMap] = useState<google.maps.Map | null>(null);
+  const [userLocation, setUserLocation] = useState<google.maps.LatLng | null>(null);
+  const [searchLocation, setSearchLocation] = useState<MarkerType | null>(null);
 
   const onLoad = useCallback(
     (autocompleteInstance: google.maps.places.Autocomplete) => {
@@ -46,15 +48,18 @@ export default function Map() {
       const place = autocomplete.getPlace();
       const location = place.geometry?.location;
       if (location) {
+        const searchResult: MarkerType = {
+          lat: location.lat(),
+          lng: location.lng(),
+          name: place.name || "Local pesquisado",
+          address: place.formatted_address || "Endereço não disponível",
+          photos: place.photos || [],
+        };
+
+        setSearchLocation(searchResult); 
         setMarkers((prevMarkers) => [
           ...prevMarkers,
-          {
-            lat: location.lat(),
-            lng: location.lng(),
-            name: place.name || "Local pesquisado",
-            address: place.formatted_address || "Endereço não disponível",
-            photos: place.photos || [],
-          },
+          searchResult,
         ]);
 
         map?.panTo(location);
@@ -74,7 +79,7 @@ export default function Map() {
       );
 
       const request: google.maps.places.PlaceSearchRequest = {
-        location: center,
+        location: userLocation || center, 
         radius: 5000,
         keyword: "Unidade Básica de Saúde",
       };
@@ -108,12 +113,6 @@ export default function Map() {
     }
   };
 
-  useEffect(() => {
-    if (map) {
-      fetchPostosDeSaude();
-    }
-  }, [map]);
-
   const onMapLoad = (mapInstance: google.maps.Map) => {
     console.log("Mapa carregado");
     setMap(mapInstance);
@@ -125,18 +124,48 @@ export default function Map() {
     });
   };
 
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const userLatLng = new google.maps.LatLng(latitude, longitude);
+          setUserLocation(userLatLng);
+          if (map) {
+            map.setCenter(userLatLng);
+            fetchPostosDeSaude();
+          }
+        },
+        (error) => {
+          console.error("Erro ao obter a localização do usuário:", error);
+          if (map) {
+            map.setCenter(center);
+            fetchPostosDeSaude();
+          }
+        }
+      );
+    } else {
+      console.error("Geolocalização não é suportada pelo navegador.");
+      if (map) {
+        map.setCenter(center);
+        fetchPostosDeSaude();
+      }
+    }
+  }, [map]);
+
   return (
-    <LoadScript
-      googleMapsApiKey="AIzaSyAb48RVBUN2ZMMHtCXLTy7DeBnmCTAqawg"
+    <LoadScriptNext
+      googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
       libraries={libraries}
     >
+    <section className="map__section">
       <h3 className="map__title">
         Encontre uma unidade de saúde perto de você
       </h3>
-      <div className="map">
-        <div className="search">
+      <div className="map__container">
+        <div className="search__container">
           <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-            <div className="search__wrapper">
+            <div className="search__content">
               <input placeholder="Buscar" className="search__input" />
               <div className="search__icon">
                 <IoIosSearch size={25} />
@@ -146,9 +175,9 @@ export default function Map() {
         </div>
 
         <GoogleMap
-          mapContainerClassName="map__container"
+          mapContainerClassName="map"
           zoom={12}
-          center={center}
+          center={userLocation || center} 
           onLoad={onMapLoad}
         >
           {markers.map((marker, index) => (
@@ -162,6 +191,17 @@ export default function Map() {
               onClick={() => setSelectedMarker(marker)}
             />
           ))}
+
+          {searchLocation && (
+            <Marker
+              position={{ lat: searchLocation.lat, lng: searchLocation.lng }}
+              icon={{
+                url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                scaledSize: new window.google.maps.Size(40, 40),
+              }}
+              onClick={() => setSelectedMarker(searchLocation)}
+            />
+          )}
 
           {selectedMarker && (
             <InfoWindow
@@ -187,6 +227,7 @@ export default function Map() {
           )}
         </GoogleMap>
       </div>
-    </LoadScript>
+    </section>
+  </LoadScriptNext>
   );
 }

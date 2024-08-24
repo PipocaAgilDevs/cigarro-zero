@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "../Logo";
 import "./styles.css";
 
-function Header() {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -131,4 +131,3 @@ function Header() {
   );
 }
 
-export default Header;

@@ -8,15 +8,15 @@ import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-c
 import Card from "../../../../components/Card";
 import "./styles.css";
 
-const UnderstandAboutSmoking = () => {
+export default function UnderstandAboutSmoking() {
   const navigate = useNavigate();
 
   return (
-    <section className="entenda-tabagismo">
-      <div className="container">
-        <div className="title_section_content">
-          <h2>Entenda sobre o Tabagismo</h2>
-          <p className="subtitle">A informação liberta do vício</p>
+    <section className="understand-about-smoking">
+      <div className="understand-about-smoking__container">
+        <div className="understand-about-smoking__container__text">
+          <h2 className="understand-about-smoking__title">Entenda sobre o Tabagismo</h2>
+          <p className="understand-about-smoking__subtitle">Uma seleção especial de conteúdos</p>
         </div>
         <div className="card-grid">
           <Card
@@ -45,7 +45,7 @@ const UnderstandAboutSmoking = () => {
           />
         </div>
         <button
-          className="btn-ver-mais"
+          className="btn--see-more"
           onClick={() => navigate("/informe-se")}
         >
           Ver mais conteúdos
@@ -53,6 +53,6 @@ const UnderstandAboutSmoking = () => {
       </div>
     </section>
   );
-};
+}
 
-export default UnderstandAboutSmoking;
+

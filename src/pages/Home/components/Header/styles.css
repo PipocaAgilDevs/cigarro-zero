@@ -1,19 +1,4 @@
-.banner {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    -10deg,
-    #d9e5f3 0%,
-    #d9e5f3 35%,
-    #b0c9e7 55%,
-    #b0c9e7 100%
-  );
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: -1; */
-  /* margin-top: 2rem; */
+.banner__header {
   display: flex;
   justify-content: center;
   padding: 0 2rem;
@@ -26,7 +11,7 @@
   );
 }
 
-.banner-content {
+.banner__content {
   width: 100%;
   display: flex;
   align-items: center;
@@ -35,84 +20,88 @@
   gap: 2rem;
 }
 
-.banner-content-text {
+.banner__content__text {
   flex: 1;
 }
 
-.banner-title {
+.banner__title {
   font-family: "Oswald", "sans-serif";
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   color: var(--gray500);
   font-weight: 400;
 }
 
-.banner-second-title {
+.banner__second__title {
   font-family: "Oswald", "sans-serif";
-  font-size: 3.75rem;
+  font-size: 6rem;
   color: var(--gray500);
   font-weight: 400;
+  margin-bottom: 3rem;
 }
 
-.colored-text {
+.banner__second_title--color {
   font-family: "Oswald", "sans-serif";
   color: var(--Primary-300, #00418d);
-  font-size: 3.75rem;
+  font-size: 6rem;
   font-weight: 400;
 }
 
-.banner-subtitle {
-  font-size: 1.25rem;
+.banner__content__subtext {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.banner__subtitle {
+  font-family: "Inter", "sans-serif";
+  font-weight: 500;
+  font-size: 2rem;
   margin-top: 1rem;
 }
 
-.banner-content img {
+.banner__image {
   max-width: 50%;
   height: auto;
   border-radius: 8px;
 }
 
-/* @media (min-width: 651px) and (max-width: 1024px) {
-  .banner-title {
-    font-size: 3.5rem;
-  }
-
-  .banner-subtitle {
-    font-size: 1.8rem;
-  }
-} */
 
 @media (max-width: 650px) {
-  .banner-content {
+  .banner__content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .banner-content-text {
+  .banner__content__text {
     text-align: center;
   }
 
-  .banner-title {
-    font-size: 1.25rem;
-    color: var(--gray500);
-    font-weight: 400;
-  }
-
-  .banner-second-title {
+  .banner__title {
     font-size: 2rem;
     color: var(--gray500);
     font-weight: 400;
   }
 
-  .colored-text {
-    font-size: 2rem;
+  .banner__second__title {
+    font-family: "Oswald", "sans-serif";
+    font-size: 3.2rem;
+    color: var(--gray500);
+    font-weight: 400;
+    margin-bottom: 2.8rem;
   }
 
-  .banner-subtitle {
-    font-size: 1rem;
+  .banner__second_title--color {
+    font-family: "Oswald", "sans-serif";
+    font-size: 3.2rem;
+    font-weight: 400;
   }
 
-  .banner-content img {
+  .banner__subtitle {
+    font-size: 1.6rem;
+  }
+
+  .banner__image {
     max-width: 100%;
     margin-top: 2rem;
   }

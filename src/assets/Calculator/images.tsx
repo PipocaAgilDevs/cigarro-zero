@@ -28,6 +28,7 @@ import SunflowerOff from "./sunflower OFF.svg";
 import SunflowerOn from "./sunflower ON.svg";
 import TreesOff from "./trees OFF.svg";
 import TreesOn from "./trees ON.svg";
+import InviteToApp from "./invite-to-app.svg";
 
 export const images: { [key: string]: string } = {
   Homem,
@@ -60,4 +61,5 @@ export const images: { [key: string]: string } = {
   EatOff,
   TrophyOn,
   TrophyOff,
+  InviteToApp
 };

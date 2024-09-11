@@ -12,7 +12,7 @@ function Calculadora() {
   const inputCigarrosRef = useRef<HTMLInputElement>(null);
   const inputPrecoRef = useRef<HTMLInputElement>(null);
 
-  const [calculatorVisible, setCalculatorVisible] = useState(true);
+  const [inviteToAppVisible, setInviteToAppVisible] = useState(true);
   const [cardsVisible, setCardsVisible] = useState(false);
   const [cardStates, setCardStates] = useState(Array(12).fill(false));
 
@@ -153,8 +153,8 @@ function Calculadora() {
 
     setCardStates(newCardStates);
     setTotalDays(totalDias);
-    setCalculatorVisible(true);
     setCardsVisible(true);
+    setInviteToAppVisible(false);
   };
 
   const handleCalculate = () => {
@@ -214,173 +214,199 @@ function Calculadora() {
   };
 
   const handleReset = () => {
-    setCalculatorVisible(true);
     setCardsVisible(false);
     setCardStates(Array(12).fill(false));
     setTotalDays(0);
     setTotalCigarettesAvoided(0);
     setTotalMoneySaved(0);
-    setCalculatorVisible(true);
     setCardsVisible(false);
+    setInviteToAppVisible(true);
+    
 
     if (inputAnosRef.current) inputAnosRef.current.value = "";
     if (inputMesesRef.current) inputMesesRef.current.value = "";
     if (inputDiasRef.current) inputDiasRef.current.value = "";
     if (inputCigarrosRef.current) inputCigarrosRef.current.value = "";
     if (inputPrecoRef.current) inputPrecoRef.current.value = "";
+
+    requestAnimationFrame(() => {
+      const element = calculadoraRef.current;
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const offset = window.scrollY + rect.top - 100;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }
+    });
   };
 
   return (
-    <div className="calculadora-container" ref={calculadoraRef}>
-      <div className="calculadora-content">
-        <div className="calculadora-header">
-          <div className="calculadora-text-container">
-            <h1>CALCULADORA DE SAÚDE</h1>
-            <p>
-              Quer parar de fumar ou precisa de um incentivo extra? <br></br>
-              Descubra quanto tempo é necessário para sua saúde<br></br> se
+    <div className="calculator" ref={calculadoraRef}>
+      <div className="calculator__content">
+        <div className="calculator__header">
+          <div className="calculator__container_text">
+            <h1 className="calculator__title">CALCULADORA DE SAÚDE</h1>
+            <p className="calculator__subtitle">
+              Quer parar de fumar ou precisa de um incentivo extra? 
+              Descubra quanto tempo é necessário para sua saúde se
               restabelecer dos efeitos do cigarro
             </p>
             <p>
-              <span className="calculadora-text-small">
+              <span className="calculator__subtitle--small">
                 Simule e descubra os{" "}
-                <span className="calculadora-text-small-bolder">
+                <span className="calculator__subtitle--small-bolder">
                   benefícios de parar de fumar!
                 </span>
               </span>
             </p>
           </div>
-          <div className="calculadora-banner-container">
+          <div className="calculator__container__image">
             <img
               src={images.Homem}
-              className="calculadora-banner-image"
-              alt=""
+              className="calculator__image"
+              alt="homem branco de camisa branca com expressão de empolgação e felicidade segurando um telefone na mão"
             />
           </div>
         </div>
 
-        {calculatorVisible && (
-          <div className="calculadora">
-            <div className="calculadora-forms">
-              <h2>
-                Preencha as informações abaixo e surpreenda-se com os resultados
-              </h2>
-              <div className="calculadora-all-inputs">
-                <div className="calculadora-input-container">
-                  <div className="coluna leftItens">
-                    <h3>Há quanto tempo você parou de fumar?</h3>
-                    <div className="inputs">
-                      <input
-                        ref={inputAnosRef}
-                        type="number"
-                        placeholder="0"
-                        className="inputCalc"
-                        min="0"
-                      />
-                      <label htmlFor="">anos</label>
-                      <input
-                        ref={inputMesesRef}
-                        type="number"
-                        placeholder="0"
-                        className="inputCalc"
-                      />
-                      <label htmlFor="">meses</label>
-                      <input
-                        ref={inputDiasRef}
-                        type="number"
-                        placeholder="0"
-                        className="inputCalc"
-                      />
-                      <label htmlFor="">dias</label>
-                    </div>
+        <div className="calculator__forms__container">
+          <div className="calculator__forms">
+            <h2 className="calculator__forms__title">
+              Preencha as informações abaixo e surpreenda-se com os resultados
+            </h2>
+            <div className="calculator__forms__input__container">
+              <div className="calculator__first-row__input">
+                <div className="column calculator__first-input__container">
+                  <h3 className="calculator__forms__label">Há quanto tempo você parou de fumar?</h3>
+                  <div className="calculator__inputs first">
+                    <input
+                      ref={inputAnosRef}
+                      type="number"
+                      placeholder="0"
+                      className="calculator__input"
+                      min="0"
+                    />
+                    <label htmlFor="">anos</label>
+                    <input
+                      ref={inputMesesRef}
+                      type="number"
+                      placeholder="0"
+                      className="calculator__input"
+                    />
+                    <label htmlFor="">meses</label>
+                    <input
+                      ref={inputDiasRef}
+                      type="number"
+                      placeholder="0"
+                      className="calculator__input"
+                    />
+                    <label htmlFor="">dias</label>
                   </div>
-                  <div className="coluna rightItens">
-                    <h3>Quantos cigarros você fumava por dia?</h3>
-                    <div className="inputs">
+                </div>
+                <div className="column calculator__second-input__container">
+                  <h3 className="calculator__forms__label">Quantos cigarros você fumava por dia?</h3>
+                  <div className="calculator__inputs">
+                    <div className="calculator__inputs second">
                       <input
                         ref={inputCigarrosRef}
                         type="number"
                         placeholder="0"
-                        className="inputCalc"
+                        className="calculator__input"
                       />
-
-                      <span className="obs">
-                        Obs.: 20 cigarro é igual a um maço.
-                      </span>
+                      <label className="label" htmlFor="">cigarros</label>
                     </div>
-                  </div>
-                </div>
-                <div className="calculadora-input">
-                  <div className="coluna leftItens2">
-                    <h3>Quantos reais você pagava no maço?</h3>
-                    <input
-                      ref={inputPrecoRef}
-                      type="text"
-                      placeholder="R$ 00,00"
-                      className="inputCalc"
-                      onChange={handlePrecoChange}
-                    />
+                    <p className="label__obs">
+                      Obs.: 20 cigarro é igual a um maço.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="btnResultado">
-                <button onClick={handleCalculate}>Ver Resultado</button>
+              <div className="column calculator__third-input__container">
+                <h3 className="calculator__forms__label">Quantos reais você pagava no maço?</h3>
+                <input
+                  ref={inputPrecoRef}
+                  type="text"
+                  placeholder="R$ 00,00"
+                  className="calculator__input third"
+                  onChange={handlePrecoChange}
+                />
               </div>
             </div>
+            <div className="btn--results">
+              <button onClick={handleCalculate}>Ver Resultado</button>
+            </div>
           </div>
-        )}
+        </div>
       </div>
 
+      {inviteToAppVisible && (
+        <div className="invite__app">
+            <img className="invite__image"src={images.InviteToApp} alt="" />
+            <div className="invite__app__text">
+              <h1 className="invite__title">Expanda ainda mais sua experiência!</h1>
+              <p className="invite__subtitle">
+                Baixe agora mesmo nosso aplicativo e comece sua jornada para uma vida livre do tabagismo. 
+              </p>
+              <p className="invite__subtitle">
+                Tenha acesso fácil à Calculadora da Saúde, conteúdos para ajudar a melhorar sua qualidade de vida e uma experiência mais personalizada, tudo na palma da mão para te auxiliar a alcançar seus objetivos.
+              </p>
+
+              <div className="invite__button__container">
+                <button className="invite__button">Conheça o aplicativo!</button>
+              </div>   
+            </div>  
+        </div>     
+      )}
+
       {cardsVisible && (
-        <div className="cardContainer" ref={resultadoRef}>
-          <div className="cardContent">
-            <h2>Resultado</h2>
-            <div className="Banerresultados">
-              <div className="resultItens">
-                <div className="resultCardTwoFirst">
-                  <div className="resultCard">
-                    <div className="resultIcon">
-                      <img src={images.Calendar} alt="Calendario" />
-                      <p>
-                        <span className="dadosResult">
-                          {totalDays.toLocaleString("pt-BR")}
-                        </span>
-                      </p>
-                    </div>
-                    <p className="textResult">dias sem fumar</p>
-                  </div>
-                  <div className="resultCard">
-                    <div className="resultIcon">
-                      <img src={images.Confete} alt="Confete" />
-                      <p>
-                        <span className="dadosResult">
-                          {totalCigarettesAvoided.toLocaleString("pt-BR")}
-                        </span>
-                      </p>
-                    </div>
-                    <p className="textResult">Cigarros evitados</p>
-                  </div>
-                </div>
-                <div className="resultCard">
-                  <div className="resultIcon">
-                    <img src={images.Coins} alt="Moedas" />
+        <div className="results" ref={resultadoRef}>
+          <div className="results__content">
+            <h2 className="results__title">Resultado</h2>
+            <div className="results__resume">
+              <div className="result__items">
+                <div className="result__two__first__rows">
+                <div className="result_column">
+                  <div className="result__row">
+                    <img className="result__icon" src={images.Calendar} alt="Calendario" />
                     <p>
-                      <span className="dadosResult">
+                      <span className="result__info">
+                        {totalDays.toLocaleString("pt-BR")}
+                      </span>
+                    </p>
+                  </div>
+                  <p className="result__label">dias sem fumar</p>
+                </div>
+                <div className="result_column">
+                  <div className="result__row">
+                    <img className="result__icon" src={images.Confete} alt="Confete" />
+                    <p>
+                      <span className="result__info">
+                        {totalCigarettesAvoided.toLocaleString("pt-BR")}
+                      </span>
+                    </p>
+                  </div>
+                  <p className="result__label">Cigarros evitados</p>
+                </div>
+                </div>
+                <div className="result_column">
+                  <div className="result__row">
+                    <img className="result__icon" src={images.Coins} alt="Moedas" />
+                    <p>
+                      <span className="result__info">
                         {formatMoney(totalMoneySaved)}
                       </span>
                     </p>
                   </div>
-                  <p className="textResult">a mais no seu bolso!</p>
+                  <p className="result__label">a mais no seu bolso!</p>
                 </div>
               </div>
             </div>
 
-            <div className="cardSection">
+            <div className="cards__container">
               <div className="cards">
                 {cards.map((card, index) => (
                   <div
                     key={card.id}
-                    className={`cardInformacao ${
+                    className={`card__info ${
                       cardStates[index] ? "card-on" : "card-off"
                     }`}
                   >
@@ -395,7 +421,7 @@ function Calculadora() {
                     </div>
                     <div className="cardText">
                       <div className="cardTitle">
-                        <h3 className="titleCard">{card.Title}</h3>
+                        <h3 className="card__title">{card.Title}</h3>
                         <img
                           className="trofeu"
                           src={

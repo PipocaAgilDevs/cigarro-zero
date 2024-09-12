@@ -46,7 +46,13 @@ export default function UnderstandAboutSmoking() {
         </div>
         <button
           className="btn--see-more"
-          onClick={() => navigate("/informe-se")}
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",  
+            });
+            navigate("/informe-se")}
+          }
         >
           Ver mais conteúdos
         </button>

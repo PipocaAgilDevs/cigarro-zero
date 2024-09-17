@@ -63,6 +63,12 @@
   border: 2px solid #cecece;
 }
 
+.custom-control {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 20px !important;
+}
+
 @media (max-width: 1080px) {
   .map__section {
     padding: 0 2rem;

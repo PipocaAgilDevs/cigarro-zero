@@ -26,13 +26,13 @@ function Carousel() {
     { title: "Dicas para superar a dependência" },
   ];
 
-  const handleTopicClick = (index: number) => {
-    setActiveIndex(index);
-  };
+  // const handleTopicClick = (index: number) => {
+  //   setActiveIndex(index);
+  // };
 
   return (
     <div className="carousel">
-      <div className="carousel-topics">
+      {/* <div className="carousel-topics">
         {topics.map((topic, index) => (
           <button
             key={index}
@@ -44,7 +44,7 @@ function Carousel() {
             {topic.title}
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

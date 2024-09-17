@@ -4,7 +4,7 @@
   margin-top: 3rem;
 }
 
-.carousel-topics {
+/* .carousel-topics {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -13,9 +13,9 @@
   justify-content: center;
   width: fit-content;
   margin: 0 auto;
-}
+} */
 
-.carousel-topic {
+/* .carousel-topic {
   background: none;
   border: none;
   padding: 0;
@@ -32,7 +32,7 @@
 
 .carousel-topic.active {
   font-weight: bold;
-}
+} */
 
 @media (max-width: 1024px) {
   .carousel {

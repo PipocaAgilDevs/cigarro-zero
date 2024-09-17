@@ -20,7 +20,7 @@ export function Header() {
           <div className="banner_content">
             <h1>
               Você sabia que <br />
-              <span>a sua saúde pode melhorar ainda hoje</span>
+              <p>a sua saúde pode melhorar ainda hoje</p>
             </h1>
 
             <div className="banner_grid">

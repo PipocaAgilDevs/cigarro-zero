@@ -1,28 +1,15 @@
-import { useCallback } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import LogoWhite from "@assets/logo-white.svg";
 
 import "./styles.css";
 
 function Footer() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleScrollToTop = useCallback(() => {
-    if (location.pathname === "/") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else {
-      navigate("/");
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname, navigate]);
-
   const scrollUp = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

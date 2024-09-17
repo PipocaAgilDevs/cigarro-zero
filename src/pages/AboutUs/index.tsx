@@ -1,5 +1,5 @@
 import IbsonCabralImg from "@assets/AboutUs/Profiles/ibson-cabral.png";
-import HeroImg from "@assets/AboutUs/hero-sobre-nos.png";
+import HeroImg from "@assets/AboutUs/hero-sobre-nos2.svg";
 import LinkedinIcon from "@assets/AboutUs/linkedin-icon.svg";
 import WavesImg from "@assets/AboutUs/waves.png";
 

@@ -10,11 +10,10 @@ function Footer() {
   const navigate = useNavigate();
 
   const handleScrollToTop = useCallback(() => {
-    // verifica se está na home se não redireciona para ela.
     if (location.pathname === "/") {
       window.scrollTo({
         top: 0,
-        behavior: "smooth", // Adiciona o efeito de scroll suave
+        behavior: "smooth",
       });
     } else {
       navigate("/");

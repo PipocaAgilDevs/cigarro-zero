@@ -2,16 +2,19 @@
   width: 100%;
   background-color: #003d84;
   color: #fefefe;
-  padding: 20px;
+  padding: 4.5rem;
   font-family: "Inter", sans-serif;
 }
 
 .footer img {
-  width: 72px;
-  height: 60.86px;
+  width: 7rem;
+  height: 6rem;
 }
 
 .footer a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
   color: #fefefe;
   text-decoration: none;
 }
@@ -65,10 +68,15 @@
   justify-content: space-between;
 }
 
-.footer-text-right,
 .footer-text-left {
   width: auto;
-  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.footer-text-right{
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .LogoWhite {

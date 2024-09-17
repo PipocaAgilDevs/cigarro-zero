@@ -21,13 +21,7 @@ function Footer() {
     }
   }, [location.pathname, navigate]);
 
-  const handleSobreNosClick = () => {
-    navigate("/sobre-nos");
-    window.scrollTo(0, 0);
-  };
-
-  const handleInformeSeClick = () => {
-    navigate("/informe-se");
+  const scrollUp = () => {
     window.scrollTo(0, 0);
   };
 
@@ -35,7 +29,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer_wrapper container">
         <div className="footer_links">
-          <Link to="" onClick={handleScrollToTop}>
+          <Link to="/" onClick={scrollUp}>
             <div className="LogoWhite">
               <img src={LogoWhite} alt="Logo Cigarro Zero" />
             </div>
@@ -44,18 +38,22 @@ function Footer() {
             <div className="list">
               <ul className="list_links">
                 <li>
-                  <Link to="" onClick={handleInformeSeClick}>
+                  <Link to="/informe-se" onClick={scrollUp}>
                     Informe-se
                   </Link>
                 </li>
                 <li>
-                  <Link to="">Calculadora de saúde</Link>
+                  <Link to="/calculadora" onClick={scrollUp}>
+                    Calculadora de saúde
+                  </Link>
                 </li>
                 <li>
-                  <Link to="">Encontrar ajuda</Link>
+                  <Link to="/encontrar-ajuda" onClick={scrollUp}>
+                    Encontrar ajuda
+                  </Link>
                 </li>
                 <li>
-                  <Link to="" onClick={handleSobreNosClick}>
+                  <Link to="/sobre-nos" onClick={scrollUp}>
                     Sobre nós
                   </Link>
                 </li>

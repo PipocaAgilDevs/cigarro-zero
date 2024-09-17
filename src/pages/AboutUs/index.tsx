@@ -20,7 +20,7 @@ export default function AboutUs() {
               <h3>Uma iniciativa para ajudar pessoas a pararem de fumar</h3>
               <p>
                 O Projeto foi criado com base em extensas pesquisas sobre
-                Doenças Pulmonares Obstrutivas Crônicas (DPOC). Reconhecendo o
+                Doenças Pulmonares Obstrutivas Crônicas (DPOC).<br></br> Reconhecendo o
                 cigarro como um dos principais causadores dessas doenças,
                 decidimos atacar a raiz do problema para um impacto mais
                 abrangente na saúde das pessoas.
@@ -76,14 +76,16 @@ export default function AboutUs() {
             </a>
           </div>
         </header>
-        <div>
-          <h2 className={styles.teamTitle}>Time Vermelho Rubi</h2>
-          <div className={styles.teamGrid}>
-            {team.map((member, i) => (
-              <MemberCard {...member} key={i} />
-            ))}
+        <section>
+          <div className="teamSection2">
+            <h2 className={styles.teamTitle}>Time Vermelho Rubi</h2>
+            <div className={styles.teamGrid}>
+              {team.map((member, i) => (
+                <MemberCard {...member} key={i} />
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
       </section>
     </main>
   );

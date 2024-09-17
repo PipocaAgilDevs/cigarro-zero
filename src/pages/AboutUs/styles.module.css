@@ -22,7 +22,13 @@
 .hero {
   display: flex;
   align-items: center;
-  padding-right: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.hero img {
+  margin-left: 0;
 }
 
 .title {
@@ -41,9 +47,10 @@
   color: var(--gray500);
 }
 
-.textCard {
-  max-width: 850px;
-}
+/* .teamSection{
+  max-width: 1280px;
+  margin: 0 auto;
+} */
 
 .textCard h2 {
   font-size: 44px;
@@ -70,16 +77,8 @@
 .subhero {
   display: flex;
   gap: 40px;
-}
-
-@media (max-width: 1460px) {
-  .hero {
-    padding-right: 40px;
-  }
-
-  .subhero {
-    padding-left: 60px;
-  }
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .paddingBottom {
@@ -87,7 +86,7 @@
 }
 
 .teamSection {
-  padding: 80px 60px;
+  padding: 92px 0px 200px;
   background-color: var(--primary50);
 }
 
@@ -99,12 +98,13 @@
 .teamSection header {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 100px;
+  max-width: 1280px;
 }
 
-.teamSection .textCard {
+/* .teamSection .textCard {
   max-width: 1000px;
-}
+} */
 
 .teamSection .textCard p {
   margin-top: 30px;
@@ -149,22 +149,46 @@
   color: var(--primary500);
 }
 
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 256px);
-  gap: 32px;
-  justify-content: center;
+.teamSection2 {
+  max-width: 1280px;
 }
 
-@media (max-width: 1200px) {
+/* .teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  gap: 32px;
+  justify-content: center;
+  max-width: 1280px;
+  
+} */
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 296px); /* Cards com 280px */
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* @media (max-width: 1460px) {
+  .hero {
+    padding-right: 40px;
+  }
+
+  .subhero {
+    padding-left: 60px;
+  }
+} */
+
+@media (max-width: 1280px) {
   .hero {
     flex-direction: column-reverse;
     padding-top: 50px;
-    padding-left: 60px;
+    text-align: center;
   }
 
   .hero img {
-    width: 80%;
+    width: 100%;
   }
 
   .waveImage {
@@ -172,7 +196,7 @@
   }
 
   .textCard {
-    padding-right: 20px;
+    text-align: center;
   }
 
   .teamSection header {
@@ -191,9 +215,9 @@
     gap: 20px;
   }
 
-  .hero img {
+  /* .hero img {
     display: none;
-  }
+  } */
 
   .teamGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -219,7 +243,9 @@
     padding-right: 20px;
   }
 
-  .textCard {
+  .heroSection {
+    display: flex;
+    flex-direction: column;
     padding-right: 0;
   }
 
@@ -230,5 +256,45 @@
 
   .teamGrid {
     grid-template-columns: 1fr;
+  }
+
+  .pretitle {
+    font-family: Oswald;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    color: var(--gray500);
+  }
+
+  .title {
+    font-family: Oswald;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 3.8rem;
+    color: var(--primary300);
+  }
+
+  .textCard h3 {
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.011em;
+    text-align: center;
+    order: 1;
+  }
+
+  .textCard p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.011em;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    
   }
 }

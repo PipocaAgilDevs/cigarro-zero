@@ -1,3 +1,5 @@
+
+
 .memberCard {
   min-height: 240px;
   display: flex;
@@ -18,7 +20,15 @@
 }
 
 .memberCard .name {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.memberCard .position {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .memberCard .linkedinLink {
@@ -27,4 +37,6 @@
   gap: 5px;
   margin-top: auto;
   font-weight: 500;
+  font-size: 1.6rem;
 }
+

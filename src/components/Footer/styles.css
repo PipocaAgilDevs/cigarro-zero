@@ -2,7 +2,7 @@
   width: 100%;
   background-color: #003d84;
   color: #fefefe;
-  padding: 4.5rem;
+  padding: 4.5rem 0;
   font-family: "Inter", sans-serif;
 }
 
@@ -116,9 +116,9 @@
   }
   .footer-text-left {
     margin: 5rem 0 0 0;
-    font-size: 0.75rem;
+    font-size: 1.2rem;
   }
   .footer-text-right {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
 }

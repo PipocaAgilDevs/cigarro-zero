@@ -24,7 +24,7 @@ export default function RefAccordion() {
       </div>
       {isOpen && (
         <div className={styles.accordionContent}>
-          <p>
+          <p className="accordion__text">
             AMERICAN CANCER SOCIETY. Health Benefits of Quitting Smoking Over
             Time. Disponível em:{" "}
             <a
@@ -35,7 +35,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 29 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             FUNDAÇÃO OSWALDO CRUZ. Tabagismo – O Mal da Destruição em Massa.
             Disponível em:{" "}
             <a
@@ -46,7 +46,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 20 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             INSTITUTO NACIONAL DE CÂNCER. Tratamento do tabagismo. Disponível
             em:{" "}
             <a
@@ -57,7 +57,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 29 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             MINISTÉRIO DA SAÚDE, Biblioteca Virtual em Saúde. Tabagismo.
             Disponível em:{" "}
             <a href="https://bvsms.saude.gov.br/tabagismo-13/" target="_blank">
@@ -65,7 +65,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 29 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             MINISTÉRIO DA SAÚDE. Ministério da Saúde e INCA lançam campanha de
             prevenção ao uso de cigarros eletrônicos. Disponível em:{" "}
             <a
@@ -76,7 +76,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 5 de agosto de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             MSD BRASIL. Cessação do tabagismo. Disponível em:{" "}
             <a
               href="https://www.msdmanuals.com/pt-br/profissional/t%C3%B3picos-especiais/tabagismo/cessa%C3%A7%C3%A3o-do-tabagismo"
@@ -86,7 +86,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 29 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             ORGANIZAÇÃO MUNDIAL DA SAÚDE. Tabaco. Disponível em:{" "}
             <a
               href="https://www.paho.org/pt/101-razoes-para-parar-fumar-0"
@@ -96,7 +96,7 @@ export default function RefAccordion() {
             </a>
             . Acesso em: 20 de julho de 2024.
           </p>
-          <p>
+          <p className="accordion__text">
             PREFEITURA MUNICIPAL DE RIBEIRÃO PRETO. Saúde. Disponível em:{" "}
             <a
               href="https://www.ribeiraopreto.sp.gov.br/portal/pdf/saude154202108.pdf"

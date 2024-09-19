@@ -50,10 +50,10 @@ export default function GetInformed() {
           </div>
         </div>
 
-        <article className={styles.article}>
-          <div dangerouslySetInnerHTML={{ __html: content.article }} />
-          <RefAccordion />
+        <article className={styles.articleContents}>
+          <div dangerouslySetInnerHTML={{ __html: content.article }} /> 
         </article>
+        <RefAccordion />
       </main>
     </div>
   );

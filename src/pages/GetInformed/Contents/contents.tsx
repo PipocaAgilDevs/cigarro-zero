@@ -190,7 +190,7 @@ const contents = {
     },
     article: `
             <section>
-              <p>
+              <p className="paragraph">
                 O tabagismo é responsável por uma ampla gama de doenças graves,
                 afetando praticamente todos os sistemas do corpo humano. Abaixo,
                 detalhamos algumas das condições mais comuns associadas ao uso
@@ -199,7 +199,7 @@ const contents = {
             </section>
             <section>
               <h3>Doenças Respiratórias</h3>
-              <p>
+              <p className="paragraph">
                 O sistema respiratório é um dos mais afetados pelo tabagismo. Os
                 principais problemas incluem:
               </p>

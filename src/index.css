@@ -42,7 +42,7 @@
   --tertiary50: #f7f9fb;
   --tertiary100: #f2f4f7;
   --tertiary150: #e4e7f3;
-  --tertiary200: #0085b0;
+  --tertiary200: #f27d00; /*#0085b0;*/
   --tertiary250: #00739e;
   --tertiary300: #00618d;
   --tertiary350: #005384;
@@ -91,6 +91,8 @@
   --error-450: #620000; /* rgb(98, 0, 0) */
   --error-450: #4c0000; /* rgb(76, 0, 0) */
   --error-500: #4c0000; /* rgb(76, 0, 0) */
+
+  font-size: 62.5%;
 }
 
 * {
@@ -100,10 +102,11 @@
 }
 
 .header-content,
-.container,
-.calculadora-header,
-.banner-content,
-.cardContent,
+.understand-about-smoking__container,
+.calculator__header,
+.banner__content,
+.results__content,
+.invite__app,
 .container-cta {
   max-width: 1280px;
   margin: 0 auto;

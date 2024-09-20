@@ -1,11 +1,12 @@
-import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/Home";
-import InformeSe from "./pages/Informe-se";
-import InformeSeConteudo from "./pages/Informe-se/Conteudo";
-import SobreNos from "./pages/SobreNos/index.tsx";
-import Calculadora from "./pages/Calculadora/";
+
 import Layout from "./components/Layout/index.tsx";
+import AboutUs from "./pages/AboutUs/index.tsx";
+import Calculator from "./pages/Calculator/index.tsx";
+import FindHelp from "./pages/FindHelp/index.tsx";
+import Contents from "./pages/GetInformed/Contents/index.tsx";
+import GetInformed from "./pages/GetInformed/index.tsx";
+import Home from "./pages/Home";
 
 function App() {
   const routes = createBrowserRouter([
@@ -15,23 +16,27 @@ function App() {
       children: [
         {
           index: true,
-          element: <HomePage />,
+          element: <Home />,
         },
         {
           path: "informe-se",
-          element: <InformeSe />,
+          element: <GetInformed />,
         },
         {
           path: "informe-se/:contentSlug",
-          element: <InformeSeConteudo />,
+          element: <Contents />,
         },
         {
           path: "sobre-nos",
-          element: <SobreNos />,
+          element: <AboutUs />,
         },
         {
           path: "calculadora",
-          element: <Calculadora />,
+          element: <Calculator />,
+        },
+        {
+          path: "encontrar-ajuda",
+          element: <FindHelp />,
         },
       ],
     },

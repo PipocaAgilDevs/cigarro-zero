@@ -1,40 +1,22 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./footer.css";
-import LogoWhite from "../../assets/logo-white.svg";
-import { useCallback } from "react";
+import { Link } from "react-router-dom";
+
+import LogoWhite from "@assets/logo-white.svg";
+
+import "./styles.css";
 
 function Footer() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleScrollToTop = useCallback(() => {
-    // verifica se está na home se não redireciona para ela.
-    if (location.pathname === "/") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // Adiciona o efeito de scroll suave
-      });
-    } else {
-      navigate("/");
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname, navigate]);
-
-  const handleSobreNosClick = () => {
-    navigate("/sobre-nos");
-    window.scrollTo(0, 0);
-  };
-
-  const handleInformeSeClick = () => {
-    navigate("/informe-se");
-    window.scrollTo(0, 0);
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
     <footer className="footer">
       <div className="footer_wrapper container">
         <div className="footer_links">
-          <Link to="" onClick={handleScrollToTop}>
+          <Link to="/" onClick={scrollUp}>
             <div className="LogoWhite">
               <img src={LogoWhite} alt="Logo Cigarro Zero" />
             </div>
@@ -43,18 +25,22 @@ function Footer() {
             <div className="list">
               <ul className="list_links">
                 <li>
-                  <Link to="" onClick={handleInformeSeClick}>
+                  <Link to="/informe-se" onClick={scrollUp}>
                     Informe-se
                   </Link>
                 </li>
                 <li>
-                  <Link to="">Calculadora de saúde</Link>
+                  <Link to="/calculadora" onClick={scrollUp}>
+                    Calculadora de saúde
+                  </Link>
                 </li>
                 <li>
-                  <Link to="">Encontrar ajuda</Link>
+                  <Link to="/encontrar-ajuda" onClick={scrollUp}>
+                    Encontrar ajuda
+                  </Link>
                 </li>
                 <li>
-                  <Link to="" onClick={handleSobreNosClick}>
+                  <Link to="/sobre-nos" onClick={scrollUp}>
                     Sobre nós
                   </Link>
                 </li>

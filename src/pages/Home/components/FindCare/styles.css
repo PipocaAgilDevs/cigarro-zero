@@ -1,0 +1,57 @@
+.find-care {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  background-color: var(--primary50);
+}
+
+.find-care__container {
+  padding: 8rem 0 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.find-care__title {
+  color: var(--Grey-Shades-500, #1c1c1c);
+  text-align: center;
+  font-family: "Oswald", "sans-serif";
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.find-care__subtitle {
+  color: var(--Grey-Shades-500, #1c1c1c);
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (max-width: 650px) {
+  .find-care__container {
+    padding: 2rem;
+  }
+
+  .find-care__title {
+    font-size: 2.8rem;
+    line-height: 33.6px;
+  }
+
+  .find-care__container__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .find-care__subtitle {
+    font-size: 1.6rem;
+  }
+}

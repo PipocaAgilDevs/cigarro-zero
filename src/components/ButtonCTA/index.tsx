@@ -1,5 +1,6 @@
 import { ComponentProps } from "react";
-import "./button.css";
+
+import "./styles.css";
 
 export default function Button({
   children,

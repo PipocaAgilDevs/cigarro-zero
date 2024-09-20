@@ -1,19 +1,19 @@
-import { useEffect, useState, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
-import Logo from "../Logo";
-import "./header.css";
+import { Link, useLocation } from "react-router-dom";
 
-function Header() {
+import Logo from "../Logo";
+import "./styles.css";
+
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const headerRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
 
-  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -33,12 +33,11 @@ function Header() {
     };
 
     window.addEventListener("scroll", scrollHeader);
-    
+
     return () => {
       window.removeEventListener("scroll", scrollHeader);
     };
   }, []);
-
 
   useEffect(() => {
     const adjustBodyPadding = () => {
@@ -54,7 +53,6 @@ function Header() {
       window.removeEventListener("resize", adjustBodyPadding);
     };
   }, []);
-
 
   return (
     <header
@@ -94,10 +92,18 @@ function Header() {
               </li>
             </Link>
 
-            <li className="nav-list-item">
-              Encontrar ajuda
-              <SlArrowRight className="menu-arrow" />
-            </li>
+            <Link
+              to="/encontrar-ajuda"
+              className={`header-btn ${
+                location.pathname === "/encontrar-ajuda" ? "active" : ""
+              }`}
+              onClick={scrollUp}
+            >
+              <li className="nav-list-item">
+                Encontrar ajuda
+                <SlArrowRight className="menu-arrow" />
+              </li>
+            </Link>
 
             <Link
               to="/sobre-nos"
@@ -125,4 +131,3 @@ function Header() {
   );
 }
 
-export default Header;

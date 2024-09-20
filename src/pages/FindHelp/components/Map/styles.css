@@ -1,0 +1,132 @@
+.map__title {
+  font-family: "Oswald", "sans-serif";
+  color: var(--primary300);
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 3.2rem;
+}
+
+.map__container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  height: 78.6rem;
+  margin-bottom: 15.7rem;
+}
+
+.search__container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 2.8rem;
+  left: 2.8rem;
+  height: 4.8rem;
+  background-color: var(--white50);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.search__content {
+  display: flex;
+  align-items: center;
+  width: 37.4rem;
+}
+
+.search__input {
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  flex: 1;
+  outline: none;
+}
+
+.search__input::placeholder {
+  color: var(--white450);
+}
+
+.search__icon {
+  color: var(--gray300);
+}
+
+.map {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 30px;
+  border: 2px solid #cecece;
+}
+
+.custom-control {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 20px !important;
+}
+
+@media (max-width: 1080px) {
+  .map__section {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .map__section {
+    padding: 0 2rem;
+  }
+
+  .map__title {
+    font-family: "Oswald", "sans-serif";
+    color: var(--primary300);
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 5.5rem;
+  }
+
+  .map__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .search__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    height: 4.8rem;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .search__content {
+    display: flex;
+    align-items: center;
+    width: 29rem;
+  }
+
+  .search__input {
+    font-size: 1.4rem;
+  }
+
+  .search__icon {
+    margin-left: 0.5rem;
+  }
+
+  .map {
+    border-radius: 30px;
+    border: 2px solid #cecece;
+  }
+}

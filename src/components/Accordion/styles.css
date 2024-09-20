@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.accordion {
+  margin-top: 100px;
+  padding-bottom: 55px;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fefefe;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  text-align: left;
+  outline: none;
+  box-shadow: 0px 2px 1px -1px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
+}
+
+.accordion-title img {
+  margin-left: 1rem;
+}
+
+.accordion-content {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  /* height: 150px; */
+  border-radius: 8px;
+  padding: 12px;
+  display: none;
+  overflow: hidden;
+  background-color: #fefefe;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 2px 1px -1px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
+  transition: max-height 0.4s ease;
+  position: relative; /* Adiciona posição relativa */
+}
+
+.accordion-content p {
+  padding-top: 9px;
+  
+}
+
+.accordion-content a {
+  color: #000000;
+}
+
+.accordion-content.open {
+  display: block;
+}
+
+.setaCima {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}

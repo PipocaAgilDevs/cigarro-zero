@@ -1,0 +1,76 @@
+.understand-about-smoking__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.understand-about-smoking__title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-family: "Oswald", "sans-serif";
+  font-size: 5.2rem;
+  padding-top: 7.2rem;
+}
+
+.understand-about-smoking__subtitle {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--gray500);
+  font-family: "Inter", "sans-serif";
+  padding-bottom: 6.6rem;
+  font-weight: 500;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2rem 5rem;
+  padding-top: 2rem;
+  padding-bottom: 3.25rem;
+}
+
+.btn--see-more {
+  margin: 2rem auto 0;
+  padding: 1.2rem 2.2rem;
+  background: var(--white50);
+  color: var(--primary200);
+  border: 2px solid var(--primary200);
+  border-radius: 8px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-family: "Inter", "sans-serif";
+  margin-bottom: 5.9rem;
+  font-weight: 700;
+}
+
+.btn--see-more:hover {
+  background-color: var(--primary100);
+}
+
+@media (max-width: 650px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .understand-about-smoking__title {
+    text-align: center;
+    margin-bottom: 0.8rem;
+    font-family: Oswald, sans-serif;
+    font-size: 2.8rem;
+    padding-top: 4rem;
+    font-weight: 600;
+  }
+
+  .understand-about-smoking__subtitle {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--gray500);
+    font-family: Inter, sans-serif;
+    padding-bottom: 4rem;
+    font-weight: 400;
+  }
+}

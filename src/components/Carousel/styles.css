@@ -1,0 +1,47 @@
+.carousel {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+/* .carousel-topics {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+} */
+
+/* .carousel-topic {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+
+.carousel-topic:hover {
+  text-decoration: underline;
+}
+
+.carousel-topic.active {
+  font-weight: bold;
+} */
+
+@media (max-width: 1024px) {
+  .carousel {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-topic {
+    font-size: 0.875rem;
+  }
+}

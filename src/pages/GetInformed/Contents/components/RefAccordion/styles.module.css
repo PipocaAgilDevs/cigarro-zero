@@ -15,18 +15,26 @@
   align-items: center;
   padding: 0 16px;
   height: 48px;
+  font-size: 1.6rem;
   cursor: pointer;
+  
 }
+
 
 .accordionTitle:active {
   background-color: #d8d8d8;
 }
 
 .accordionContent {
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  font-size: 1.4rem;
+  gap: 1.2rem;
 }
 
-.accordionContent p {
-  margin: 20px 0;
-  overflow-x: hidden;
+
+.accordionContent a {
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
 }

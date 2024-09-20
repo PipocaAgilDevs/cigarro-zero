@@ -3,13 +3,15 @@
 .accordion {
   margin-top: 100px;
   padding-bottom: 55px;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
 }
 
 .accordion-title {
   display: flex;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
   font-weight: 400;
   background-color: #fefefe;
   cursor: pointer;
@@ -48,6 +50,7 @@
 
 .accordion-content p {
   padding-top: 9px;
+  
 }
 
 .accordion-content a {

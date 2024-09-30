@@ -1,9 +1,9 @@
 import BeneficiosDePararDeFumarImg from "@assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import CigarroEletronicoMitosEVerdadesImg from "@assets/GetInformed/Contents/heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
+import CigarroEletronicoMitosEVerdadesImg from "@assets/GetInformed/Contents/heros/cigarro-eletronico-mitos-e-verdades-conteudo-contents.svg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo-contents.svg";
 import EntendendoOTabagismoImg from "@assets/GetInformed/Contents/heros/entendendo-o-tabagismo-conteudo.jpg";
 import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-cigarro-conteudo.png";
-import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "@assets/GetInformed/Contents/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
+import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "@assets/GetInformed/Contents/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo-contents.svg";
 import GabrielaEscritoraImg from "@assets/GetInformed/Contents/writers/gabriela-escritora.jpg";
 import RobertaEscritoraImg from "@assets/GetInformed/Contents/writers/roberta-escritora.jpg";
 

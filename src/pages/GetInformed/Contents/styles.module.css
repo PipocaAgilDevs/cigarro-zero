@@ -119,6 +119,14 @@
     padding-right: 30px;
   }
 
+  .heroImage {
+    height: auto;
+  }
+
+  .heroImage img{
+    height: auto;
+  }
+
   .main {
     padding-left: 40px;
     padding-right: 40px;
@@ -155,6 +163,14 @@
     text-align: center;
   }
 
+  .heroImage img{
+    height: auto;
+  }
+
+  .heroImage img:nth-of-type(5){
+    height: 245px;
+  }
+
   .articleContents h3 {
     font-family: Oswald, sans-serif;
     font-size: 2rem;
@@ -171,5 +187,9 @@
     font-family: Inter, sans-serif;
     font-size: 1.6rem;
     margin: 10px 0;
+  }
+
+  .heroImage {
+    height: auto;
   }
 }

@@ -1,9 +1,10 @@
-import BeneficiosDePararDeFumarImg from "@assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import CigarroEletronicoMitosEVerdadesImg from "@assets/GetInformed/Contents/heros/cigarro-eletronico-mitos-e-verdades-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
-import EntendendoOTabagismoImg from "@assets/GetInformed/Contents/heros/entendendo-o-tabagismo-conteudo.jpg";
-import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-cigarro-conteudo.png";
-import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "@assets/GetInformed/Contents/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.jpg";
+import BeneficiosDePararDeFumarImg from "@assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.svg";
+import CigarroEletronicoMitosEVerdadesImg from "@assets/GetInformed/Contents/heros/cigarro-eletronico-mitos-e-verdades-conteudo.svg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.svg";
+import OPapelDasMidiasSociaisNaPromocaoDoTabagismoEntreOsJovensImg from "@assets/GetInformed/Contents/heros/o-papel-das-midias-sociais-na-promocao-do-tabagismo-entre-os-jovens-conteudo.svg";
+import ArrangementNoTobaccoDayElements from "@assets/GetInformed/Contents/heros/arrangement-no-tobacco-day-elements.svg"
+import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-cigarro-na-saúde-doenças-e-complicações.svg"
+
 
 import Card from "../../../../components/Card";
 import "./styles.css";
@@ -14,7 +15,7 @@ function CardSection() {
       <div className="card_grid">
         <Card
           title="Entendendo o Tabagismo"
-          image={EntendendoOTabagismoImg}
+          image={ArrangementNoTobaccoDayElements}
           description="O tabagismo é reconhecido como uma doença epidêmica que causa dependência física, psicológica e comportamental."
           to="/informe-se/entendendo-o-tabagismo"
         />

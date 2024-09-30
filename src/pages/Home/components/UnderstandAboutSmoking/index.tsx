@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
-import BeneficiosDePararDeFumarImg from "@assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.jpg";
-import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.jpg";
-import EntendendoOTabagismoImg from "@assets/GetInformed/Contents/heros/entendendo-o-tabagismo-conteudo.jpg";
-import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-cigarro-conteudo.png";
+import BeneficiosDePararDeFumarImg from "@assets/GetInformed/Contents/heros/beneficios-de-parar-de-fumar-conteudo.svg";
+import ComparacaoEntreMetodosDeCessacaoDoTabagismoImg from "@assets/GetInformed/Contents/heros/comparacao-entre-metodos-de-cessação-do-tabagismo-conteudo.svg";
+import EntendendoOTabagismoImg from "@assets/GetInformed/Contents/heros/arrangement-no-tobacco-day-elements.svg";
+import ImpactoDoCigarroImg from "@assets/GetInformed/Contents/heros/impacto-do-cigarro-na-saúde-doenças-e-complicações.svg";
 
 import Card from "../../../../components/Card";
 import "./styles.css";

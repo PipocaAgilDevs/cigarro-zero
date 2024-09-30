@@ -63,39 +63,6 @@ export default function Map() {
     }
   };
 
-  // const fetchPostosDeSaude = () => {
-  //   if (window.google && window.google.maps) {
-  //     const placesService = new window.google.maps.places.PlacesService(
-  //       document.createElement("div")
-  //     );
-
-  //     const request: google.maps.places.PlaceSearchRequest = {
-  //       location: userLocation || center,
-  //       radius: 3000,
-  //       keyword: "Unidade Básica de Saúde",
-  //     };
-
-  //     placesService.nearbySearch(request, (results, status) => {
-  //       if (status === window.google.maps.places.PlacesServiceStatus.OK && results) {
-  //         const postos = results.map((place) => {
-  //           const photoUrl = place.photos && place.photos[0]
-  //             ? place.photos[0].getUrl({ maxWidth: 200 })
-  //             : "";
-
-  //           return {
-  //             lat: place.geometry?.location?.lat() || 0,
-  //             lng: place.geometry?.location?.lng() || 0,
-  //             name: place.name || "UBS" || "Hospital",
-  //             address: place.vicinity || "Endereço não disponível",
-  //             photoUrl: photoUrl,
-  //           };
-  //         });
-  //         setMarkers(postos);
-  //       }
-  //     });
-  //   }
-  // };
-
   const fetchPostosDeSaude = useCallback(() => {
     if (window.google && window.google.maps) {
       const placesService = new window.google.maps.places.PlacesService(
@@ -170,59 +137,29 @@ export default function Map() {
     });
   };
 
-  // useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position) => {
-  //         const { latitude, longitude } = position.coords;
-  //         const userLatLng = new google.maps.LatLng(latitude, longitude);
-  //         setUserLocation(userLatLng);
-  //         if (map) {
-  //           map.setCenter(userLatLng);
-  //           fetchPostosDeSaude();
-  //         }
-  //       },
-  //       () => {
-  //         if (map) {
-  //           map.setCenter(center);
-  //           fetchPostosDeSaude();
-  //         }
-  //       }
-  //     );
-  //   } else {
-  //     if (map) {
-  //       map.setCenter(center);
-  //       fetchPostosDeSaude();
-  //     }
-  //   }
-  // }, [map]);
-
   useEffect(() => {
-    if (navigator.geolocation) {
+    if (navigator.geolocation && map) { 
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
           const userLatLng = new google.maps.LatLng(latitude, longitude);
           setUserLocation(userLatLng);
-          if (map) {
-            map.setCenter(userLatLng);
-            fetchPostosDeSaude(); 
-          }
+  
+          map.setCenter(userLatLng);
+          fetchPostosDeSaude();
         },
         () => {
-          if (map) {
-            map.setCenter(center);
-            fetchPostosDeSaude();
-          }
+      
+          map.setCenter(center);
+          fetchPostosDeSaude();
         }
       );
-    } else {
-      if (map) {
-        map.setCenter(center);
-        fetchPostosDeSaude();
-      }
+    } else if (map) {
+      map.setCenter(center);
+      fetchPostosDeSaude();
     }
-  }, [map]);
+  }, [map]); 
+  
 
   const formatAddress = (address: string) => {
     return address.split(", ").map((line, index) => (
@@ -328,6 +265,3 @@ export default function Map() {
     </LoadScriptNext>
   );
 }
-
-
-

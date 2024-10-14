@@ -158,7 +158,7 @@ export default function Map() {
       map.setCenter(center);
       fetchPostosDeSaude();
     }
-  }, [map]); 
+  }, [ map ]); 
   
 
   const formatAddress = (address: string) => {
